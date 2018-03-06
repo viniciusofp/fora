@@ -5,7 +5,7 @@ var MongoClient = require('mongodb').MongoClient;
 var url = 'mongodb://localhost:27017/fora';
 
 /* GET home page. */
-router.get('/', function(req, res, next) {
+router.get('/parte1', function(req, res, next) {
   if (req.cookies.userid) {
     console.log('I have an ID already, thank you')
   } else {
@@ -26,9 +26,13 @@ router.get('/', function(req, res, next) {
       if (err) {
         throw err;
       }
-      res.render('index', { title: 'Express', data: result });
+      res.render('parte1', { title: 'Express', data: result });
     });
   });
+});
+/* GET home page. */
+router.get('/', function(req, res, next) {
+  res.render('inicio', { title: 'Express' });
 });
 /* GET home page. */
 router.get('/parte2', function(req, res, next) {
