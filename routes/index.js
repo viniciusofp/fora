@@ -9,7 +9,7 @@ router.get('/', function(req, res, next) {
   res.render('index', { title: 'Express' });
 });
 /* GET home page. */
-router.get('/parte1', function(req, res, next) {
+router.get('/parte-um', function(req, res, next) {
   if (req.cookies.userid) {
     console.log('I have an ID already, thank you')
   } else {
@@ -35,7 +35,7 @@ router.get('/parte1', function(req, res, next) {
   });
 });
 /* GET home page. */
-router.get('/parte2', function(req, res, next) {
+router.get('/parte-dois', function(req, res, next) {
   if (req.cookies.userid) {
     console.log('I have an ID already, thank you')
   } else {
@@ -79,7 +79,7 @@ router.post('/submit', function(req, res) {
             })
         }
     })
-    res.redirect('/parte2')
+    res.redirect('/parte-dois')
 })
 router.post('/submitparte2', function(req, res) {
     MongoClient.connect(url, function (err,database) {
