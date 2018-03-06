@@ -99,17 +99,17 @@ router.post('/submitparte2', function(req, res) {
     res.redirect('/')
 })
 
-router.get('/cleardb', function(req, res, next) {
-  MongoClient.connect(url, function(err, database) {
-  if (err) {
-    throw err;
-  }
-  const db = database.db('fora')
-  var q = db.collection('q');
-  q.remove();
+// router.get('/cleardb', function(req, res, next) {
+//   MongoClient.connect(url, function(err, database) {
+//   if (err) {
+//     throw err;
+//   }
+//   const db = database.db('fora')
+//   var q = db.collection('q');
+//   q.remove();
 
-});
-  res.redirect('/')
-});
+// });
+//   res.redirect('/')
+// });
 
 module.exports = router;
