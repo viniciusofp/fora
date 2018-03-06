@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Serif+Pro:400,700');
+
+body {
+  padding: 50px;
+  background: #dadada;
+  color: 000;
+  font-size: 18px;
+  font-weight: 300;
+	font-family: 'Source Serif Pro';
+}
+
+a {
+  color: #00B7FF;
+}
+
+label input {
+	display: inline;
+}
+
+input,
+input.form-control,
+select,
+select.form-control {
+	background: #dadada;
+	border-radius: 0;
+	border: 5px solid blue;
+	font-size: 2rem;
+	height: auto!important;
+	min-height: 70px!important;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+label {
+	font-size: 2rem;
+}
+
+input:focus,
+input.form-control:focus,
+select:focus,
+select.form-control:focus {
+	border-radius: 0;
+	box-shadow: none;
+}
+
+input[type=radio] {
+    visibility: hidden;
+}
+input[type=radio]::after {
+    content: '( )';
+    letter-spacing: 6px;
+    width: 50px;
+    height: 35px;
+    position: absolute;
+    top: 0px;
+    left: -10px;
+    visibility: visible;
+}
+
+input[type=radio]:checked::before {
+    content: 'X';
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 50px;
+    height: 35px;
+    visibility: visible;
+    color: blue;
+    opacity: 1;
+}
+input[type=radio]::before {
+    content: 'X';
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 50px;
+    height: 35px;
+    visibility: visible;
+    color: blue;
+    opacity: 0;
+    transition: .3s;
+}
+
+.form-check {
+	margin-left: 30px;
+}
+.form-group-check {
+	padding-bottom: 200px!important;
+}
+

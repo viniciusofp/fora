@@ -1,0 +1,15 @@
+extends layout
+
+block content
+	.container
+		.row.justify-content-center
+			.col-md-8
+				form(action="/submitparte2", method="post")
+					.form-group
+						label Whatever
+						input.form-control(name="whatever")
+					.form-group
+						button.form-control.btn.btn-primary(type="submit") Enviar
+				a(onclick="window.history.back();")
+					button.btn.btn-info Voltar
+
