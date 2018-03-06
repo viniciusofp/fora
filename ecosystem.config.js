@@ -1,7 +1,7 @@
 module.exports = {
   apps: [{
     name: 'fora',
-    script: './app.js'
+    script: "node ./bin/www",
   }],
   deploy: {
     production: {
