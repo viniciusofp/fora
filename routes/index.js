@@ -67,7 +67,7 @@ router.post('/submit', function(req, res) {
             console.log('Could not connect to DB')
         } else {
             const db = database.db('fora').collection('q');
-            req.body.timestamp = Date.now();
+            req.body.timestamp = new Date( Date.now() );
             req.body.userid = req.cookies.userid;
             db.find({userid: req.cookies.userid}).toArray(function(err, result) {
               if (result.length > 0) {
@@ -87,7 +87,6 @@ router.post('/submitparte2', function(req, res) {
             console.log('Could not connect to DB')
         } else {
             const db = database.db('fora').collection('q');
-            req.body.timestamp = Date.now();
             req.body.userid = req.cookies.userid;
             db.find({userid: req.cookies.userid}).toArray(function(err, result) {
               if (result) {

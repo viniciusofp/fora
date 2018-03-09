@@ -1,12 +1,14 @@
 @import url('https://fonts.googleapis.com/css?family=Source+Serif+Pro:400,700');
 
 body {
-  padding: 50px;
   background: #dadada;
   color: 000;
   font-size: 18px;
   font-weight: 300;
-	font-family: 'Source Serif Pro';
+  font-family: 'Source Serif Pro';
+
+}
+form {
 }
 
 a {
@@ -84,7 +86,24 @@ input[type=radio]::before {
 .form-check {
 	margin-left: 30px;
 }
-.form-group-check {
-	padding-bottom: 200px!important;
+
+.question-wrapper {
+    height: 100vh;
+    position: relative;
+}
+
+.question {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 500px;
+    margin: 0 auto;
+    transition: .2s;
+
+}
+
+.question.current {
+
 }
 

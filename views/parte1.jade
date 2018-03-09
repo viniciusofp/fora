@@ -4,84 +4,90 @@ block content
 
 	.container
 		.row.justify-content-center
-			.col-md-8
+			.col-md-12
 				form(action="/submit", method="post", autocomplete="on")
-					.form-group
-						input.form-control(name="name", autocomplete="name", placeholder="Nome")
-					.form-group
-						select.form-control(name="ano-nascimento", autocomplete="byear")
-							option(selected, disabled) Ano de Nascimento
-							- var n = 2009;
-							while n > 1900
-								option(value="#{n}")= n--
-					.form-group
-						input.form-control(name="email", type="email", autocomplete='email', pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$", placeholder="Email")
-					.form-group
-						input.form-control(name="cep", autocomplete="postal-code", placeholder="CEP")
-					.form-group.form-group-check
-						h4.mt-5 Identidade de Gênero
-						.form-check
-							input#homem.genero.form-check-input(type="radio", value="homem", name="genero")
-							label.form-check-label(for="homem") Homem
-						.form-check
-							input#mulher.genero.form-check-input(type="radio", value="mulher", name="genero")
-							label.form-check-label(for="mulher") Mulher
-						.form-check
-							input#homem-trans.genero.form-check-input(type="radio", value="homem-trans", name="genero")
-							label.form-check-label(for="homem-trans") Homem Trans
-						.form-check
-							input#mulher-trans.genero.form-check-input(type="radio", value="mulher-trans", name="genero")
-							label.form-check-label(for="mulher-trans") Mulher Trans
-						.form-check
-							input#outro_genero.genero.form-check-input(type="radio", value="outro", name="genero")
-							label.form-check-label(for="outro_genero") Outra: 
-								input#outro_genero_input.form-control(type="text", name="genero_outro")
-					.form-group.form-group-check
-						h4 Cor
-						.form-check
-							input#preta.cor.form-check-input(type="radio", value="preta", name="cor")
-							label.form-check-label(for="preta") Preta
-						.form-check
-							input#parda.cor.form-check-input(type="radio", value="parda", name="cor")
-							label.form-check-label(for="parda") Parda
-						.form-check
-							input#branca.cor.form-check-input(type="radio", value="branca", name="cor")
-							label.form-check-label(for="branca") Branca
-						.form-check
-							input#indigena.cor.form-check-input(type="radio", value="indigena", name="cor")
-							label.form-check-label(for="indigena") Indígena
-						.form-check
-							input#amarela.cor.form-check-input(type="radio", value="amarela", name="cor")
-							label.form-check-label(for="amarela") Amarela
-						.form-check
-							input#outra_cor.cor.form-check-input(type="radio", value="outro", name="cor")
-							label.form-check-label(for="outra_cor")
-								input#outra_cor_input.form-control(type="text", name="cor_outra")
-					.form-group.form-group-check
-						h4 Religião
-						.form-check
-							input#catolica.religiao.form-check-input(type="radio", value="catolica", name="religiao")
-							label.form-check-label(for="catolica") Católica
-						.form-check
-							input#evangelica.religiao.form-check-input(type="radio", value="evangelica", name="religiao")
-							label.form-check-label(for="evangelica") Evangélica
-						.form-check
-							input#espirita.religiao.form-check-input(type="radio", value="espirita", name="religiao")
-							label.form-check-label(for="espirita") Espírita
-						.form-check
-							input#judaica.religiao.form-check-input(type="radio", value="judaica", name="religiao")
-							label.form-check-label(for="judaica") Judaica
-						.form-check
-							input#matriz_africana.religiao.form-check-input(type="radio", value="matriz_africana", name="religiao")
-							label.form-check-label(for="matriz_africana") Matriz Africana
-						.form-check
-							input#agnostica_ateia.religiao.form-check-input(type="radio", value="agnostica_ateia", name="religiao")
-							label.form-check-label(for="agnostica_ateia") Agnóstica/Ateia
-						.form-check
-							input#outra_religiao.religiao.form-check-input(type="radio", value="outro", name="religiao")
-							label.form-check-label(for="outra_religião")
-								input#outra_religiao_input.form-control(type="text", name="religiao_outra")
-					.form-group
-						button.form-control.btn.btn-primary(type="submit") Continuar
+					.question-wrapper
+						.question
+							.form-group
+								input.form-control(name="name", autocomplete="name", placeholder="Nome")
+							.form-group
+								input.form-control(name="ano-nascimento", autocomplete="byear", placeholder="AAAA", pattern="9999", type="number", step="1", min="1918", max="2010")
+							.form-group
+								input.form-control(name="email", type="email", autocomplete='email', pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$", placeholder="Email")
+							.form-group
+								input.form-control(name="cep", autocomplete="postal-code", placeholder="CEP")
+					.question-wrapper
+						.question
+							.form-group.form-group-check
+								h4.mt-5 Identidade de Gênero
+								.form-check
+									input#homem.genero.form-check-input(type="radio", value="homem", name="genero")
+									label.form-check-label(for="homem") Homem
+								.form-check
+									input#mulher.genero.form-check-input(type="radio", value="mulher", name="genero")
+									label.form-check-label(for="mulher") Mulher
+								.form-check
+									input#homem-trans.genero.form-check-input(type="radio", value="homem-trans", name="genero")
+									label.form-check-label(for="homem-trans") Homem Trans
+								.form-check
+									input#mulher-trans.genero.form-check-input(type="radio", value="mulher-trans", name="genero")
+									label.form-check-label(for="mulher-trans") Mulher Trans
+								.form-check
+									input#outro_genero.genero.form-check-input(type="radio", value="outro", name="genero")
+									label.form-check-label(for="outro_genero")
+										input#outro_genero_input.form-control(type="text", name="genero_outro", placeholder="Outra")
+					.question-wrapper
+						.question
+							.form-group.form-group-check
+								h4 Cor
+								.form-check
+									input#preta.cor.form-check-input(type="radio", value="preta", name="cor")
+									label.form-check-label(for="preta") Preta
+								.form-check
+									input#parda.cor.form-check-input(type="radio", value="parda", name="cor")
+									label.form-check-label(for="parda") Parda
+								.form-check
+									input#branca.cor.form-check-input(type="radio", value="branca", name="cor")
+									label.form-check-label(for="branca") Branca
+								.form-check
+									input#indigena.cor.form-check-input(type="radio", value="indigena", name="cor")
+									label.form-check-label(for="indigena") Indígena
+								.form-check
+									input#amarela.cor.form-check-input(type="radio", value="amarela", name="cor")
+									label.form-check-label(for="amarela") Amarela
+								.form-check
+									input#outra_cor.cor.form-check-input(type="radio", value="outro", name="cor")
+									label.form-check-label(for="outra_cor")
+										input#outra_cor_input.form-control(type="text", name="cor_outra", placeholder="Outra")
+					.question-wrapper
+						.question
+							.form-group.form-group-check
+								h4 Religião
+								.form-check
+									input#catolica.religiao.form-check-input(type="radio", value="catolica", name="religiao")
+									label.form-check-label(for="catolica") Católica
+								.form-check
+									input#evangelica.religiao.form-check-input(type="radio", value="evangelica", name="religiao")
+									label.form-check-label(for="evangelica") Evangélica
+								.form-check
+									input#espirita.religiao.form-check-input(type="radio", value="espirita", name="religiao")
+									label.form-check-label(for="espirita") Espírita
+								.form-check
+									input#judaica.religiao.form-check-input(type="radio", value="judaica", name="religiao")
+									label.form-check-label(for="judaica") Judaica
+								.form-check
+									input#matriz_africana.religiao.form-check-input(type="radio", value="matriz_africana", name="religiao")
+									label.form-check-label(for="matriz_africana") Matriz Africana
+								.form-check
+									input#agnostica_ateia.religiao.form-check-input(type="radio", value="agnostica_ateia", name="religiao")
+									label.form-check-label(for="agnostica_ateia") Agnóstica/Ateia
+								.form-check
+									input#outra_religiao.religiao.form-check-input(type="radio", value="outro", name="religiao")
+									label.form-check-label(for="outra_religião")
+										input#outra_religiao_input.form-control(type="text", name="religiao_outra", placeholder="Outra")
+					.question-wrapper
+						.question
+							.form-group
+								button.form-control.btn.btn-primary(type="submit") Continuar
 				//- - for a in data
 				//- 	p #{a.name}, #{a.age}, #{a.city}, #{a.timestamp}

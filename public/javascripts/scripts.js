@@ -1,3 +1,11 @@
+
+
+$.scrollify({
+    section : ".question-wrapper",
+    scrollSpeed: 800,
+});
+
+
 $('#outro_genero_input').click(function() {
     $('.genero').prop('checked', false);
     $('#outro_genero').prop('checked', true);
@@ -12,7 +20,7 @@ $('#outra_religiao_input').click(function() {
     $('#outra_religiao').prop('checked', true);
 });
 $('input[type=radio]:not(#outra_cor, #outra_religiao, #outro_genero)').click(function() {
-    var nextObj = $(this).parent().parent().next();
+    var nextObj = $(this).parent().parent().parent().parent().next();
 
     nextObj.scrollintoview({duration: 1000})
 })
