@@ -11,6 +11,12 @@ body {
 form {
 }
 
+#logo {
+    position: fixed;
+    top: 15px;
+    left: 15px;
+}
+
 a {
   color: #00B7FF;
 }
