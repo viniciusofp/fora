@@ -2,10 +2,13 @@ doctype html
 html
 	head
 		title Fora
-		link(rel="stylesheet", href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css", integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb", crossorigin="anonymous")
 		link(rel='stylesheet', href='/stylesheets/style.css')
 	body
-		img(id="logo", src="images/logo.png")
+		.brand.h1
+			img(id="logo", src="images/logo.png")
+			| / você está na pes
+			span.text-primary (quiz)
+			| a do Fora
 		block content
 		script(src="https://code.jquery.com/jquery-3.3.1.min.js", integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=", crossorigin="anonymous")
 		script(src="/javascripts/jquery.scrollintoview.min.js")

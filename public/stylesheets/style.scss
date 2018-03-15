@@ -1,0 +1,162 @@
+$primary: blue;
+
+@import 'bootstrap/bootstrap';
+@import 'fonts';
+@import url('https://fonts.googleapis.com/css?family=Source+Serif+Pro:400,700');
+
+html {
+    font-size: .8rem;
+    @include media-breakpoint-up(sm) {
+        font-size: .9rem;
+    }
+
+    @include media-breakpoint-up(md) {
+        font-size: 1rem;
+    }
+
+    @include media-breakpoint-up(lg) {
+        font-size: 1rem;
+    }
+}
+
+
+body {
+  background: #dadada;
+  color: 000;
+  font-size: 18px;
+  font-weight: 300;
+  font-family: 'Source Serif Pro';
+
+}
+
+
+.btn-primary {
+    background: transparent;
+    border: none;
+    border-radius: 0;
+    padding-bottom: 0px;
+    padding-left: 0;
+    padding-right: 0;
+    line-height: 1;
+    border-bottom: 3px solid blue;
+    font-size: 2.5rem;
+    color: $black;
+}
+
+.lead {
+    font-size: 1.5rem;
+}
+
+.interval {
+    font-family: 'Interval';
+}
+
+
+.brand {
+    position: fixed;
+    top: 25px;
+    left: 30px;
+    font-style: italic;
+    img {
+        margin-top: -20px;
+        margin-right: 45px;
+    }
+}
+
+.intro {
+    background: #fff;
+    padding-top: 125px;
+    min-height: 100vh;
+}
+
+
+.question-wrapper {
+    height: 100vh;
+    position: relative;
+}
+
+.question {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+    transition: .2s;
+
+}
+
+.explain {
+    font-family: 'Interval', monospace;
+    font-size: .9rem;
+}
+
+
+input,
+input.form-control,
+select,
+select.form-control {
+	background: #dadada;
+	border-radius: 0;
+	border: 5px solid blue;
+	font-size: 2rem;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+label {
+	font-size: 1.5rem;
+    line-height: 2.5;
+}
+label input {
+    display: inline!important;
+    font-size: 1.5rem!important;
+    padding: 3px 5px!important
+}
+
+input:focus,
+input.form-control:focus,
+select:focus,
+select.form-control:focus {
+	border-radius: 0;
+	box-shadow: none;
+}
+
+input[type=radio] {
+    visibility: hidden;
+}
+input[type=radio]::after {
+    content: '( )';
+    letter-spacing: 6px;
+    width: 50px;
+    height: 35px;
+    position: absolute;
+    top: 0px;
+    left: -30px;
+    visibility: visible;
+    line-height: 1.5;
+}
+
+input[type=radio]:checked::before {
+    opacity: 1;
+}
+input[type=radio]::before {
+    content: 'X';
+    position: absolute;
+    top: 0px;
+    left: -20px;
+    width: 50px;
+    height: 35px;
+    visibility: visible;
+    color: blue;
+    opacity: 0;
+    transition: .2s;
+    line-height: 1.5;
+}
+
+.form-check {
+	margin-left: 30px;
+}
+
+

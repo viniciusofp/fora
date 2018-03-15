@@ -1,10 +1,17 @@
 extends layout
 
 block content
+	.container-fluid.intro
+		.container
+			.row.justify-content-center
+				.col-md-12
+					h1 Quem é você na cidade?
+				.col-md-8.mt-3
+					p.lead Que bom que você veio! O Fora precisa te ouvir para existir. Viver a cidade, viver na cidade, viver, apesar da cidade… Eis as questões!  
+					p.lead Se você mora, trabalha ou frequenta São Paulo, vem botar pra Fora o que você acha da vida na maior cidade do país. 
+					p.lead Suas respostas são os primeiros passos para entender quem são, como vivem e o que demandam os moradores da grande São Paulo... para pensar diálogos e conteúdos enquanto, de quebra, o formato da pesquisa também funciona como um quiz/teste que revela “quem é você na cidade”!
+					p.interval.text-danger
+						small Ah, e não tem resposta errada! São só 5 minutos que vão passar voando e todas as suas respostas são confidenciais.
 
-	.container
-		.row.justify-content-center
-			.col-md-8
-				p There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.
-				a(href="/parte-um")
-					button.btn Concordo e quero responder à pesquisa
+					a(href="/parte-um")
+						button.btn.btn-primary Começar

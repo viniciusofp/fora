@@ -21,6 +21,16 @@ $('#outra_religiao_input').click(function() {
 });
 $('input[type=radio]:not(#outra_cor, #outra_religiao, #outro_genero)').click(function() {
     var nextObj = $(this).parent().parent().parent().parent().next();
+    setTimeout(function() {
+       nextObj.scrollintoview({duration: 1000})
+   }, 200)
+
+})
+
+
+$('input').blur(function() {
+    var nextObj = $(this).parent().parent().parent().next();
+    console.log('lalalala', nextObj)
 
     nextObj.scrollintoview({duration: 1000})
 })
