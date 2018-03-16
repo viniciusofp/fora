@@ -78,8 +78,9 @@ router.post('/submit', function(req, res) {
               }
             })
         }
+        res.clearCookie("userid");
     })
-    res.clearCookie("userid");
+
     res.redirect('/parte-dois')
 })
 router.post('/submitparte2', function(req, res) {
