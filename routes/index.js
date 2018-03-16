@@ -36,14 +36,6 @@ router.get('/parte-um', function(req, res, next) {
 });
 /* GET home page. */
 router.get('/parte-dois', function(req, res, next) {
-  if (req.cookies.userid) {
-    console.log('I have an ID already, thank you')
-  } else {
-    var userid = shortid.generate();
-    console.log('Your userid has been set to: ' + userid)
-    res.cookie('userid', userid, {maxAge: 10800})
-  }
-
   MongoClient.connect(url, function(err, database) {
     if (err) {
       throw err;
@@ -78,31 +70,13 @@ router.post('/submit', function(req, res) {
               }
             })
         }
-        res.clearCookie("userid");
+      res.clearCookie("userid");
+      res.redirect('/parte-dois')
     })
 
-    res.redirect('/parte-dois')
+
 })
-router.post('/submitparte2', function(req, res) {
-    MongoClient.connect(url, function (err,database) {
-        if (err) {
-            console.log('Could not connect to DB')
-        } else {
-            const db = database.db('fora').collection('q');
-            req.body.userid = req.cookies.userid;
-            db.find({userid: req.cookies.userid}).toArray(function(err, result) {
-              if (result) {
-                db.update({userid: req.cookies.userid}, {$set: req.body})
-                console.log('já preencheu, update')
-              } else {
-                db.insert(req.body)
-              }
-            })
-        }
-    })
-    res.clearCookie("userid");
-    res.redirect('/')
-})
+
 
 // router.get('/cleardb', function(req, res, next) {
 //   MongoClient.connect(url, function(err, database) {
