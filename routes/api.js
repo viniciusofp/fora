@@ -17,7 +17,7 @@ router.get('/', function(req, res) {
         }
     })
 })
-router.get('/completo', function(req, res) {
+router.get('/completos', function(req, res) {
     MongoClient.connect(url, function (err,database) {
         if (err) {
             console.log('Could not connect to DB')
