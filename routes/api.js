@@ -17,5 +17,18 @@ router.get('/', function(req, res) {
         }
     })
 })
+router.get('/completo', function(req, res) {
+    MongoClient.connect(url, function (err,database) {
+        if (err) {
+            console.log('Could not connect to DB')
+        } else {
+            const db = database.db('fora')
+            var q = db.collection('q');
+            q.find({ name: { $exists: true } }).toArray(function(err, result) {
+                res.json(result)
+            })
+        }
+    })
+})
 
 module.exports = router;
