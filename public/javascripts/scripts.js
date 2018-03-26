@@ -49,7 +49,7 @@ app.controller('CEP', ['$scope', '$resource', '$q', function($scope, $resource, 
         var rua = $('#rua').val();
         var cidade = $('#cidade').val();
         var estado = $('#estado').val();
-        var urlString = "https://viacep.com.br/ws/" + estado + '/' + cidade + '/' + rua + '/json/'
+        var urlString = "http://viacep.com.br/ws/" + estado + '/' + cidade + '/' + rua + '/json/'
         var Cep = $resource(urlString).query();
             $q.all([
             Cep.$promise,
