@@ -6,7 +6,7 @@ module.exports = {
   deploy: {
     production: {
       user: 'ec2-user',
-      host: 'ec2-34-235-143-94.compute-1.amazonaws.com',
+      host: 'ec2-18-232-235-70.compute-1.amazonaws.com',
       key: '~/.ssh/fora.pem',
       ref: 'origin/master',
       repo: 'https://github.com/viniciusofp/fora.git',
