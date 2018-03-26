@@ -6,95 +6,30 @@ block content
 		.row.justify-content-center
 			.col-md-10
 				form(action="/submit", method="post", autocomplete="on")
-					.question-wrapper
-						.question
-							p.h1 Qual seu nome?
-							p.explain Melhor se for completo, para evitar confusões.
-							.form-group
-								input.form-control(type="text",name="name", autocomplete="name", placeholder="Nome", required)
-					.question-wrapper
-						.question
-							p.h1 Com qual gênero você se identifica?
-							.form-group.form-group-check
-								.form-check
-									input#homem.genero.form-check-input(type="radio", value="homem", name="genero", required)
-									label.form-check-label(for="homem") Homem
-								.form-check
-									input#mulher.genero.form-check-input(type="radio", value="mulher", name="genero", required)
-									label.form-check-label(for="mulher") Mulher
-								.form-check
-									input#homem-trans.genero.form-check-input(type="radio", value="homem-trans", name="genero", required)
-									label.form-check-label(for="homem-trans") Homem Trans
-								.form-check
-									input#mulher-trans.genero.form-check-input(type="radio", value="mulher-trans", name="genero", required)
-									label.form-check-label(for="mulher-trans") Mulher Trans
-								.form-check
-									input#nao-binario.genero.form-check-input(type="radio", value="nao-binario", name="genero", required)
-									label.form-check-label(for="nao-binario") Não-Binário
-								.form-check
-									input#outro_genero.genero.form-check-input(type="radio", value="outro", name="genero", required)
-									label.form-check-label(for="outro_genero")
-										input#outro_genero_input.form-control(type="text", name="genero_outro", placeholder="Nenhum desses")
-					.question-wrapper
-						.question
-							p.h1 Em que ano você nasceu?
-							.form-group
-								input.form-control(type="number",name="ano_nascimento", autocomplete="byear", placeholder="YYYY", pattern="[0-9]{4}", max="2010", min="1910", required)
-					.question-wrapper
-						.question
-							p.h1 Em relação à cor/etnia, como você se identifica?
-							.form-group.form-group-check
-								.form-check
-									input#preta.cor.form-check-input(type="radio", value="preta", name="cor", required)
-									label.form-check-label(for="preta") Preto(a)
-								.form-check
-									input#parda.cor.form-check-input(type="radio", value="parda", name="cor", required)
-									label.form-check-label(for="parda") Pardo(a)
-								.form-check
-									input#branca.cor.form-check-input(type="radio", value="branca", name="cor", required)
-									label.form-check-label(for="branca") Branco(a)
-								.form-check
-									input#indigena.cor.form-check-input(type="radio", value="indigena", name="cor", required)
-									label.form-check-label(for="indigena") Indígena
-								.form-check
-									input#amarela.cor.form-check-input(type="radio", value="amarela", name="cor", required)
-									label.form-check-label(for="amarela") Amarelo(a)
-								.form-check
-									input#outra_cor.cor.form-check-input(type="radio", value="outro", name="cor", required)
-									label.form-check-label(for="outra_cor")
-										input#outra_cor_input.form-control(type="text", name="cor_outra", placeholder="Outra")
-					.question-wrapper
-						.question
-							p.h1 Qual é sua fé?
-							.form-group.form-group-check
-								.form-check
-									input#catolica.religiao.form-check-input(type="radio", value="catolica", name="religiao", required)
-									label.form-check-label(for="catolica") Católica
-								.form-check
-									input#evangelica.religiao.form-check-input(type="radio", value="evangelica", name="religiao", required)
-									label.form-check-label(for="evangelica") Evangélica
-								.form-check
-									input#espirita.religiao.form-check-input(type="radio", value="espirita", name="religiao", required)
-									label.form-check-label(for="espirita") Espírita
-								.form-check
-									input#judaica.religiao.form-check-input(type="radio", value="judaica", name="religiao", required)
-									label.form-check-label(for="judaica") Judaica
-								.form-check
-									input#muculmana.religiao.form-check-input(type="radio", value="muculmana", name="religiao", required)
-									label.form-check-label(for="muculmana") Muçulmana
-								.form-check
-									input#matriz_africana.religiao.form-check-input(type="radio", value="matriz_africana", name="religiao", required)
-									label.form-check-label(for="matriz_africana") Matriz Africana
-								.form-check
-									input#agnostica.religiao.form-check-input(type="radio", value="agnostica", name="religiao", required)
-									label.form-check-label(for="agnostica") Agnóstica
-								.form-check
-									input#ateia.religiao.form-check-input(type="radio", value="ateia", name="religiao", required)
-									label.form-check-label(for="ateia") Ateia
-								.form-check
-									input#outra_religiao.religiao.form-check-input(type="radio", value="outro", name="religiao", required)
-									label.form-check-label(for="outra_religião")
-										input#outra_religiao_input.form-control(type="text", name="religiao_outra", placeholder="Outra")
+
+					// Qual seu nome e sobrenome?
+					include questions/q01
+					// O que você faz na cidade de São Paulo?
+					include questions/q02
+					// Com qual gênero você se identifica?
+					include questions/q03
+					// Em que local você nasceu?
+					include questions/q04
+					// Em que ano você nasceu?
+					include questions/q05
+					// Em relação à cor/etnia, como você se identifica?
+					include questions/q06
+					// Qual é sua fé?
+					include questions/q07
+					// Onde você mora? Você sabe seu CEP?
+					include questions/q08
+					// Que palavras abaixo melhor ilustram o que você vive em São Paulo?
+					include questions/q09
+					// Quais meios de transporte você usa para circular pela cidade?
+					include questions/q10
+					// Quais dos problemas abaixo você enfrenta para circular na cidade? 
+					include questions/q11
+
 					.question-wrapper
 						.question
 							.form-group

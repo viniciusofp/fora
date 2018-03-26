@@ -4,8 +4,18 @@ $primary: blue;
 @import 'fonts';
 @import url('https://fonts.googleapis.com/css?family=Source+Serif+Pro:400,700');
 
+
+
+body {
+  background: #dadada;
+  color: 000;
+  font-weight: 300;
+  font-family: 'Source Serif Pro';
+
+}
+
 html {
-    font-size: .8rem;
+    font-size: .6rem;
     @include media-breakpoint-up(sm) {
         font-size: .9rem;
     }
@@ -19,17 +29,6 @@ html {
     }
 }
 
-
-body {
-  background: #dadada;
-  color: 000;
-  font-size: 18px;
-  font-weight: 300;
-  font-family: 'Source Serif Pro';
-
-}
-
-
 .btn-primary {
     background: transparent;
     border: none;
@@ -39,7 +38,7 @@ body {
     padding-right: 0;
     line-height: 1;
     border-bottom: 3px solid blue;
-    font-size: 2.5rem;
+    font-size: 1.5rem;
     color: $black;
 }
 
@@ -80,7 +79,7 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    max-width: 800px;
+    max-width: 1000px;
     width: 100%;
     margin: 0 auto;
     transition: .2s;
@@ -89,7 +88,7 @@ body {
 
 .explain {
     font-family: 'Interval', monospace;
-    font-size: .9rem;
+    font-size: 14px;
 }
 
 
@@ -103,11 +102,12 @@ select.form-control {
 	font-size: 2rem;
 	padding-top: 10px;
 	padding-bottom: 10px;
+    line-height: 1.5;
 }
 
 label {
 	font-size: 1.5rem;
-    line-height: 2.5;
+    line-height: 2;
 }
 label input {
     display: inline!important;
@@ -123,10 +123,12 @@ select.form-control:focus {
 	box-shadow: none;
 }
 
-input[type=radio] {
+input[type=radio],
+input[type=checkbox] {
     visibility: hidden;
 }
-input[type=radio]::after {
+input[type=radio]::after,
+input[type=checkbox]::after {
     content: '( )';
     letter-spacing: 6px;
     width: 50px;
@@ -138,10 +140,12 @@ input[type=radio]::after {
     line-height: 1.5;
 }
 
-input[type=radio]:checked::before {
+input[type=radio]:checked::before,
+input[type=checkbox]:checked::before {
     opacity: 1;
 }
-input[type=radio]::before {
+input[type=radio]::before,
+input[type=checkbox]::before {
     content: 'X';
     position: absolute;
     top: 0px;

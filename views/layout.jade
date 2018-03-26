@@ -4,7 +4,7 @@ html
 		title Fora
 		link(rel='stylesheet', href='/stylesheets/style.css')
 		meta(name="viewport", content="width=device-width, initial-scale=1.0")
-	body
+	body(ng-app="app")
 		.brand.h1
 			img(id="logo", src="images/logo.png")
 			| / você está na pes
@@ -15,4 +15,7 @@ html
 		script(src="/javascripts/jquery.scrollintoview.min.js")
 		script(src="/javascripts/jquery.correios.min.js")
 		script(src="/javascripts/scrollsnap-polyfill.bundled.js")
+		script(src="https://code.angularjs.org/1.6.9/angular.min.js")
+		script(src="https://code.angularjs.org/1.6.9/angular-resource.min.js")
+		script(src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js")
 		script(src="/javascripts/scripts.js")
