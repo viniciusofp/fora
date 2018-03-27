@@ -93,7 +93,8 @@ html {
 .question-wrapper {
     // height: 100vh;
     // position: relative;
-    margin: 100px auto;
+    max-width: 720px;
+    margin: 50px auto;
 }
 form {
     margin-top: 40vh;
@@ -113,7 +114,7 @@ form {
     }
 }
 .enunciado {
-    font-size: 2rem;
+    font-size: 1.8rem;
     font-weight: 600;
 }
 .explain {
@@ -132,7 +133,6 @@ select.form-control {
 	border-radius: 0!important;
 	border: 5px solid #fff;
 	font-size: 1.2rem;
-    font-weight: 600;
 	padding-top: 10px;
 	padding-bottom: 10px;
     line-height: 2;
@@ -144,9 +144,24 @@ select.form-control {
     }
 }
 
+
+input,
+input.form-control {
+    cursor: text;
+}
+
+select,
+select.form-control {
+    cursor: pointer;
+}
+
 label {
 	font-size: 1.2rem;
     line-height: 2;
+    cursor: pointer;
+    &:hover {
+        font-weight: 600;
+    }
 }
 label input {
     display: inline!important;
@@ -167,6 +182,7 @@ input[type=checkbox] {
     visibility: hidden;
     width: 30px;
     height: 30px;
+    cursor: pointer;
 }
 input[type=radio]::after,
 input[type=checkbox]::after {
@@ -188,7 +204,8 @@ input[type=checkbox]:checked::before {
 input[type=radio]:checked,
 input[type=checkbox]:checked {
     &+label {
-        color: $primary
+        color: $primary;
+        font-weight: 600;
     }
 }
 input[type=radio]::before,

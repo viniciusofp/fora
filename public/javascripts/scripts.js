@@ -1,8 +1,16 @@
 $(function() {
+
   $("body").prognroll({
     height: 8, //Progress bar height
   });
 });
+
+$(document).ready(function() {
+    setTimeout(function() {
+        window.scrollTo(0, 0);
+    },100)
+
+})
 
 // $.scrollify({
 //     section : ".question-wrapper",
