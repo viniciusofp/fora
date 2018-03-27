@@ -93,7 +93,7 @@ html {
 .question-wrapper {
     // height: 100vh;
     // position: relative;
-    margin: 20vh auto;
+    margin: 100px auto;
 }
 form {
     margin-top: 40vh;
@@ -129,7 +129,7 @@ input.form-control,
 select,
 select.form-control {
 	background: #dadada;
-	border-radius: 0;
+	border-radius: 0!important;
 	border: 5px solid #fff;
 	font-size: 1.2rem;
     font-weight: 600;
@@ -137,6 +137,7 @@ select.form-control {
 	padding-bottom: 10px;
     line-height: 2;
     max-width: 720px;
+    height: calc(2rem + 20px)!important;
     &:focus {
         border: 5px solid $primary;
         background: #dadada;
