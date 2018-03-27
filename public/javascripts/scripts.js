@@ -46,9 +46,9 @@ function nasceuBrasil(that) {
 var app = angular.module('app', ['ngResource']);
 app.controller('CEP', ['$scope', '$resource', '$q', function($scope, $resource, $q) {
     $scope.buscaCep = function() {
-        var rua = $('#rua').val();
-        var cidade = $('#cidade').val();
-        var estado = $('#estado').val();
+        var rua = $('#rua-cep').val();
+        var cidade = $('#cidade-cep').val();
+        var estado = $('#estado-cep').val();
         var urlString = "http://viacep.com.br/ws/" + estado + '/' + cidade + '/' + rua + '/json/'
         var Cep = $resource(urlString).query();
             $q.all([
