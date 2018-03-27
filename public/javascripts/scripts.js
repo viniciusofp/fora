@@ -1,4 +1,8 @@
-
+$(function() {
+  $("body").prognroll({
+    height: 8, //Progress bar height
+  });
+});
 
 // $.scrollify({
 //     section : ".question-wrapper",
