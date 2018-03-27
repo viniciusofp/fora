@@ -72,3 +72,24 @@ app.controller('CEP', ['$scope', '$resource', '$q', function($scope, $resource, 
         // console.log(urlString)
     }
 }]);
+
+$('.question').waypoint(function(direction) {
+    if (direction == "down") {
+        console.log(this)
+        $(this.element).parent().siblings().children().removeClass("focus");
+        $(this.element).addClass("focus");
+    }
+}, {
+  offset: '50%'
+})
+$('.question').waypoint(function(direction) {
+    if (direction == "up") {
+        console.log(this)
+        $(this.element).parent().siblings().children().removeClass("focus");
+        $(this.element).addClass("focus");
+    }
+}, {
+  offset: function() {
+    return window.innerHeight / 2 - this.element.clientHeight
+  }
+})

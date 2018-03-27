@@ -93,9 +93,11 @@ html {
 .question-wrapper {
     // height: 100vh;
     // position: relative;
-    padding-top: 200px;
+    margin: 20vh auto;
 }
-
+form {
+    margin-top: 40vh;
+}
 .question {
     // position: absolute;
     // top: 50%;
@@ -105,12 +107,20 @@ html {
     // width: 100%;
     // margin: 0 auto;
     // transition: .2s;
-
+    opacity: .2;
+    &.focus {
+        opacity: 1;
+    }
 }
-
+.enunciado {
+    font-size: 2rem;
+    font-weight: 600;
+}
 .explain {
     font-family: 'Interval', monospace;
-    font-size: 14px;
+    font-size: .8rem;
+    margin-top: -10px;
+    max-width: 720px;
 }
 
 
@@ -120,20 +130,26 @@ select,
 select.form-control {
 	background: #dadada;
 	border-radius: 0;
-	border: 5px solid blue;
-	font-size: 2rem;
+	border: 5px solid #fff;
+	font-size: 1.2rem;
+    font-weight: 600;
 	padding-top: 10px;
 	padding-bottom: 10px;
-    line-height: 1.5;
+    line-height: 2;
+    max-width: 720px;
+    &:focus {
+        border: 5px solid $primary;
+        background: #dadada;
+    }
 }
 
 label {
-	font-size: 1.5rem;
+	font-size: 1.2rem;
     line-height: 2;
 }
 label input {
     display: inline!important;
-    font-size: 1.5rem!important;
+    font-size: 1.2rem!important;
     padding: 3px 5px!important
 }
 
@@ -148,6 +164,8 @@ select.form-control:focus {
 input[type=radio],
 input[type=checkbox] {
     visibility: hidden;
+    width: 30px;
+    height: 30px;
 }
 input[type=radio]::after,
 input[type=checkbox]::after {
@@ -156,28 +174,32 @@ input[type=checkbox]::after {
     width: 50px;
     height: 35px;
     position: absolute;
-    top: 0px;
-    left: -30px;
+    top: -3px;
+    left: -20px;
     visibility: visible;
-    line-height: 1.5;
+    line-height: 2;
 }
 
 input[type=radio]:checked::before,
 input[type=checkbox]:checked::before {
     opacity: 1;
 }
+input[type=radio]:checked,
+input[type=checkbox]:checked {
+    &+label {
+        color: $primary
+    }
+}
 input[type=radio]::before,
 input[type=checkbox]::before {
     content: 'X';
     position: absolute;
-    top: 0px;
-    left: -20px;
-    width: 50px;
-    height: 35px;
+    top: 2px;
+    left: -11px;
     visibility: visible;
     color: blue;
     opacity: 0;
-    transition: .2s;
+    transition: .4s;
     line-height: 1.5;
 }
 
