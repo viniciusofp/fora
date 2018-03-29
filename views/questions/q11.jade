@@ -1,40 +1,43 @@
-.question-wrapper.carousel-item
+.question-wrapper.carousel-item.active
 	.question
-		p.enunciado Quais dos problemas abaixo você enfrenta para circular na cidade?    
+		p.enunciado Nesses transportes, quais problemas você enfrenta?     
 		p.explain Marque tudo que quiser!
-		.form-check
-			input#altos-custos.problemas-cidade.form-check-input(type="checkbox", value="altos-custos", name="problemas-cidade")
-			label.form-check-label(for="altos-custos") Altos custos
-		.form-check
-			input#assedio.problemas-cidade.form-check-input(type="checkbox", value="assedio", name="problemas-cidade")
-			label.form-check-label(for="assedio") Assédio moral/sexual
-		.form-check
-			input#falta-de-linhas.problemas-cidade.form-check-input(type="checkbox", value="falta-de-linhas", name="problemas-cidade")
-			label.form-check-label(for="falta-de-linhas") Falta de linhas
-		.form-check
-			input#furto-ou-assalto.problemas-cidade.form-check-input(type="checkbox", value="furto-ou-assalto", name="problemas-cidade")
-			label.form-check-label(for="furto-ou-assalto") Furtos ou assaltos
-		.form-check
-			input#distancia-tempo.problemas-cidade.form-check-input(type="checkbox", value="distancia-tempo", name="problemas-cidade")
-			label.form-check-label(for="distancia-tempo") Longa distância
-		.form-check
-			input#lotacao.problemas-cidade.form-check-input(type="checkbox", value="lotacao", name="problemas-cidade")
-			label.form-check-label(for="lotacao") Lotação
-		.form-check
-			input#transito.problemas-cidade.form-check-input(type="checkbox", value="transito", name="problemas-cidade")
-			label.form-check-label(for="transito") Trânsito
-		.form-check
-			input#atropelamento-acidentes.problemas-cidade.form-check-input(type="checkbox", value="atropelamento-acidentes", name="problemas-cidade")
-			label.form-check-label(for="atropelamento-acidentes") Perigo de atropelamento e acidente
-		.form-check
-			input#falta-de-estacionamento.problemas-cidade.form-check-input(type="checkbox", value="falta-de-estacionamento", name="problemas-cidade")
-			label.form-check-label(for="falta-de-estacionamento") Falta de estacionamento
-		.form-check
-			input#sinalizacao-vias-calcadas-ruins.problemas-cidade.form-check-input(type="checkbox", value="sinalizacao-vias-calcadas-ruins", name="problemas-cidade")
-			label.form-check-label(for="sinalizacao-vias-calcadas-ruins") Sinalização, vias e/ou calçadas ruins
-		.form-check
-			input#sem-problemas.problemas-cidade.form-check-input(type="checkbox", value="sem-problemas", name="problemas-cidade")
-			label.form-check-label(for="sem-problemas") Não tenho problema algum
+		.row
+			.col-12.col-lg-5
+				.form-check
+					input#altos-custos.problemas-cidade.form-check-input(type="checkbox", value="altos-custos", name="problemas-cidade")
+					label.form-check-label(for="altos-custos") Altos custos
+				.form-check
+					input#assedio.problemas-cidade.form-check-input(type="checkbox", value="assedio", name="problemas-cidade")
+					label.form-check-label(for="assedio") Assédio moral/sexual
+				.form-check
+					input#falta-de-linhas.problemas-cidade.form-check-input(type="checkbox", value="falta-de-linhas", name="problemas-cidade")
+					label.form-check-label(for="falta-de-linhas") Falta de linhas
+				.form-check
+					input#furto-ou-assalto.problemas-cidade.form-check-input(type="checkbox", value="furto-ou-assalto", name="problemas-cidade")
+					label.form-check-label(for="furto-ou-assalto") Furtos ou assaltos
+				.form-check
+					input#distancia-tempo.problemas-cidade.form-check-input(type="checkbox", value="distancia-tempo", name="problemas-cidade")
+					label.form-check-label(for="distancia-tempo") Longa distância
+				.form-check
+					input#lotacao.problemas-cidade.form-check-input(type="checkbox", value="lotacao", name="problemas-cidade")
+					label.form-check-label(for="lotacao") Lotação
+			.col-12.col-lg-7
+				.form-check
+					input#transito.problemas-cidade.form-check-input(type="checkbox", value="transito", name="problemas-cidade")
+					label.form-check-label(for="transito") Trânsito
+				.form-check
+					input#atropelamento-acidentes.problemas-cidade.form-check-input(type="checkbox", value="atropelamento-acidentes", name="problemas-cidade")
+					label.form-check-label(for="atropelamento-acidentes") Perigo de atropelamento e acidente
+				.form-check
+					input#falta-de-estacionamento.problemas-cidade.form-check-input(type="checkbox", value="falta-de-estacionamento", name="problemas-cidade")
+					label.form-check-label(for="falta-de-estacionamento") Falta de estacionamento
+				.form-check
+					input#sinalizacao-vias-calcadas-ruins.problemas-cidade.form-check-input(type="checkbox", value="sinalizacao-vias-calcadas-ruins", name="problemas-cidade")
+					label.form-check-label(for="sinalizacao-vias-calcadas-ruins") Sinalização, vias e/ou calçadas ruins
+				.form-check
+					input#sem-problemas.problemas-cidade.form-check-input(type="checkbox", value="sem-problemas", name="problemas-cidade")
+					label.form-check-label(for="sem-problemas") Não tenho problema algum
 		.form-group
 			label.form-control-label.text-primary Outros? Quais?
 			input.form-control(name="problemas-cidade")

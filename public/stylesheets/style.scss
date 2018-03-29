@@ -125,7 +125,12 @@ html {
     //     opacity: 1;
     // }
 }
-
+.slider-nav {
+    position: fixed;
+    left: 50%;
+    bottom: 30px;
+    transform: translate(-50%, 0);
+}
 .prev-icon {
     color: $primary;
     opacity: .3;
