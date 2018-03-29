@@ -157,3 +157,18 @@ $('#carouselExampleControls').on('slide.bs.carousel', function (e) {
     $(e.relatedTarget).children().addClass('question-margin')
   }
 })
+
+$('.carousel').each(function () {
+        var $carousel = $(this);
+        var hammertime = new Hammer(this, {
+            recognizers: [
+                [Hammer.Swipe, { direction: Hammer.DIRECTION_HORIZONTAL }]
+            ]
+        });
+        hammertime.on('swipeleft', function () {
+            $carousel.carousel('next');
+        });
+        hammertime.on('swiperight', function () {
+            $carousel.carousel('prev');
+        });
+    });
