@@ -1,9 +1,9 @@
-.question-wrapper
+.question-wrapper.carousel-item
 	.question
 		p.enunciado Em que local você nasceu
 		.form-group
 			select#pais.form-control(name='pais', onchange="nasceuBrasil(this);")
-				option(selected)
+				option(selected, disabled)
 				option(value='Brasil') Brasil
 				option(value='África do Sul') África do Sul
 				option(value='Albânia') Albânia
@@ -179,4 +179,33 @@
 				option(value='Zâmbia') Zâmbia
 				option(value='Zimbábue') Zimbábue
 		.form-group
-			input#estado.form-control(name="estado", placeholder="Estado", style="display: none")
+			select#estado.form-control(name="estado", style="display: none")
+				option(value='AC') Acre
+				option(value='AL') Alagoas
+				option(value='AP') Amapá
+				option(value='AM') Amazonas
+				option(value='BA') Bahia
+				option(value='CE') Ceará
+				option(value='DF') Distrito Federal
+				option(value='ES') Espírito Santo
+				option(value='GO') Goiás
+				option(value='MA') Maranhão
+				option(value='MT') Mato Grosso
+				option(value='MS') Mato Grosso do Sul
+				option(value='MG') Minas Gerais
+				option(value='PA') Pará
+				option(value='PB') Paraíba
+				option(value='PR') Paraná
+				option(value='PE') Pernambuco
+				option(value='PI') Piauí
+				option(value='RJ') Rio de Janeiro
+				option(value='RN') Rio Grande do Norte
+				option(value='RS') Rio Grande do Sul
+				option(value='RO') Rondônia
+				option(value='RR') Roraima
+				option(value='SC') Santa Catarina
+				option(value='SP') São Paulo
+				option(value='SE') Sergipe
+				option(value='TO') Tocantins
+
+		include ../slider-controls

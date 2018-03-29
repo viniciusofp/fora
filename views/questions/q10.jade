@@ -1,42 +1,38 @@
-.question-wrapper
+.question-wrapper.carousel-item
 	.question
 		p.enunciado Quais meios de transporte você usa para circular pela cidade?   
 		p.explain Pode marcar vários.
-		.row
-			.col-12.col-sm-5
-				.form-check
-					input#ando-a-pe.meio-de-transporte.form-check-input(type="checkbox", value="ando-a-pe", name="meio-de-transporte")
-					label.form-check-label(for="ando-a-pe") Ando a pé
-				.form-check
-					input#bicicleta.meio-de-transporte.form-check-input(type="checkbox", value="bicicleta", name="meio-de-transporte")
-					label.form-check-label(for="bicicleta") Bicicleta
-				.form-check
-					input#skateboard.meio-de-transporte.form-check-input(type="checkbox", value="skateboard", name="meio-de-transporte")
-					label.form-check-label(for="skateboard") Skateboard
-				.form-check
-					input#motocicleta.meio-de-transporte.form-check-input(type="checkbox", value="motocicleta", name="meio-de-transporte")
-					label.form-check-label(for="motocicleta") Motocicleta própria
-				.form-check
-					input#carro.meio-de-transporte.form-check-input(type="checkbox", value="carro", name="meio-de-transporte")
-					label.form-check-label(for="carro") Carro próprio
-			.col-12.col-sm-7
-				.form-check
-					input#caronas.meio-de-transporte.form-check-input(type="checkbox", value="caronas", name="meio-de-transporte")
-					label.form-check-label(for="caronas") Caronas em veículos diversos 
-						span.explain (não próprios)
-				.form-check
-					input#uber-taxi.meio-de-transporte.form-check-input(type="checkbox", value="uber-taxi", name="meio-de-transporte")
-					label.form-check-label(for="uber-taxi") Uber, táxi 
-						span.explain e outros veículos de trajeto pago
-				.form-check
-					input#onibus.meio-de-transporte.form-check-input(type="checkbox", value="onibus", name="meio-de-transporte")
-					label.form-check-label(for="onibus") Ônibus
-				.form-check
-					input#metro.meio-de-transporte.form-check-input(type="checkbox", value="metro", name="meio-de-transporte")
-					label.form-check-label(for="metro") Metrô
-				.form-check
-					input#trem.meio-de-transporte.form-check-input(type="checkbox", value="trem", name="meio-de-transporte")
-					label.form-check-label(for="trem") Trem
-			.col-12
-				label.form-control-label.text-primary Outros? Quais?
-				input.form-control(name="meio-de-transporte")
+		.form-check
+			input#ando-a-pe.meio-de-transporte.form-check-input(type="checkbox", value="ando-a-pe", name="meio-de-transporte")
+			label.form-check-label(for="ando-a-pe") Ando a pé
+		.form-check
+			input#bicicleta.meio-de-transporte.form-check-input(type="checkbox", value="bicicleta", name="meio-de-transporte")
+			label.form-check-label(for="bicicleta") Bicicleta
+		.form-check
+			input#skateboard.meio-de-transporte.form-check-input(type="checkbox", value="skateboard", name="meio-de-transporte")
+			label.form-check-label(for="skateboard") Skateboard
+		.form-check
+			input#motocicleta.meio-de-transporte.form-check-input(type="checkbox", value="motocicleta", name="meio-de-transporte")
+			label.form-check-label(for="motocicleta") Moto
+		.form-check
+			input#carro.meio-de-transporte.form-check-input(type="checkbox", value="carro", name="meio-de-transporte")
+			label.form-check-label(for="carro") Carro
+		.form-check
+			input#caronas.meio-de-transporte.form-check-input(type="checkbox", value="caronas", name="meio-de-transporte")
+			label.form-check-label(for="caronas") Caronas em veículos diversos
+		.form-check
+			input#uber-taxi.meio-de-transporte.form-check-input(type="checkbox", value="uber-taxi", name="meio-de-transporte")
+			label.form-check-label(for="uber-taxi") Uber, táxi e outros veículos de trajeto pago
+		.form-check
+			input#onibus.meio-de-transporte.form-check-input(type="checkbox", value="onibus", name="meio-de-transporte")
+			label.form-check-label(for="onibus") Ônibus
+		.form-check
+			input#metro.meio-de-transporte.form-check-input(type="checkbox", value="metro", name="meio-de-transporte")
+			label.form-check-label(for="metro") Metrô
+		.form-check
+			input#trem.meio-de-transporte.form-check-input(type="checkbox", value="trem", name="meio-de-transporte")
+			label.form-check-label(for="trem") Trem
+		.form-grounp
+			label.form-control-label.text-primary Outros? Quais?
+			input.form-control(name="meio-de-transporte")
+		include ../slider-controls

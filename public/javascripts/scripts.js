@@ -55,6 +55,31 @@ function nasceuBrasil(that) {
     }
 }
 
+$('#carouselExampleControls.carousel.slide').carousel({
+  wrap: false,
+  ride: false,
+  interval: false
+})
+
+// $('.question').waypoint(function(direction) {
+//     if (direction == "down") {
+//         $(this.element).parent().siblings().children().removeClass("focus");
+//         $(this.element).addClass("focus");
+//     }
+// }, {
+//   offset: '50%'
+// })
+// $('.question').waypoint(function(direction) {
+//     if (direction == "up") {
+//         $(this.element).parent().siblings().children().removeClass("focus");
+//         $(this.element).addClass("focus");
+//     }
+// }, {
+//   offset: function() {
+//     return window.innerHeight / 2 - this.element.clientHeight
+//   }
+// })
+
 var app = angular.module('app', ['ngResource']);
 app.controller('CEP', ['$scope', '$resource', '$q', function($scope, $resource, $q) {
     $scope.buscaCep = function() {
@@ -80,24 +105,39 @@ app.controller('CEP', ['$scope', '$resource', '$q', function($scope, $resource, 
         // console.log(urlString)
     }
 }]);
-
-$('.question').waypoint(function(direction) {
-    if (direction == "down") {
-        console.log(this)
-        $(this.element).parent().siblings().children().removeClass("focus");
-        $(this.element).addClass("focus");
-    }
-}, {
-  offset: '50%'
-})
-$('.question').waypoint(function(direction) {
-    if (direction == "up") {
-        console.log(this)
-        $(this.element).parent().siblings().children().removeClass("focus");
-        $(this.element).addClass("focus");
-    }
-}, {
-  offset: function() {
-    return window.innerHeight / 2 - this.element.clientHeight
-  }
-})
+app.controller('Counter', ['$scope', function($scope) {
+    $scope.counter = 0;
+    $scope.numberOfQuestions = $('.question').length;
+    $('.next-icon').click(function() {
+        $scope.$apply(function(){
+            $scope.counter = $scope.counter + 1
+        });
+    })
+    $('.next-icon').click(function() {
+        $scope.$apply(function(){
+            $scope.counter = $scope.counter - 1
+        });
+    })
+    // $('.question').waypoint(function(direction) {
+    //     if (direction == "down") {
+    //         console.log($scope.counter)
+    //         $scope.$apply(function(){
+    //             $scope.counter = $scope.counter + 1
+    //         });
+    //     }
+    // }, {
+    //   offset: '50%'
+    // });
+    // $('.question').waypoint(function(direction) {
+    //     if (direction == "up") {
+    //         console.log($scope.counter)
+    //         $scope.$apply(function(){
+    //             $scope.counter = $scope.counter - 1
+    //         });
+    //     }
+    // }, {
+    //   offset: function() {
+    //     return window.innerHeight / 2 - this.element.clientHeight
+    //   }
+    // });
+}]);

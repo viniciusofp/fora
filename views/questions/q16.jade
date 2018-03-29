@@ -1,0 +1,22 @@
+.question-wrapper.carousel-item
+	.question
+		p.enunciado Com que frequência você sai de casa para curtir a cidade?
+		p.explain Atividades sociais, culturais, esportivas, lazer, etc.
+		.form-group.form-group-check
+			.form-check
+				input#quase-todo-dia.frequencia-lazer.form-check-input(type="radio", value="quase-todo-dia", name="frequencia-lazer", required)
+				label.form-check-label(for="quase-todo-dia") “Saio (quase) todos os dias numa semana normal” (5 a 7 vezes por semana) 
+			.form-check
+				input#finais-de-semana.frequencia-lazer.form-check-input(type="radio", value="finais-de-semana", name="frequencia-lazer", required)
+				label.form-check-label(for="finais-de-semana") “Saio nos finais de semana, às vezes até mais dias” (2 a 4 vezes por semana)
+			.form-check
+				input#saio-pouco.frequencia-lazer.form-check-input(type="radio", value="saio-pouco", name="frequencia-lazer", required)
+				label.form-check-label(for="saio-pouco") “Saio pouco, mas não perco um programa aqui e ali” (entre uma vez por semana e uma vez a cada 2 semanas)
+			.form-check
+				input#saio-muito-pouco.frequencia-lazer.form-check-input(type="radio", value="saio-muito-pouco", name="frequencia-lazer", required)
+				label.form-check-label(for="saio-muito-pouco") “Saio só para ocasiões especiais” (uma vez por mês ou menos)
+			.form-check
+				input#outra_frequencia.frequencia-lazer.form-check-input(type="radio", value="outro", name="frequencia-lazer", required)
+				label.form-check-label(for="outra_cor")
+					input#outra_frequencia_input.form-control(type="text", name="outra-frequencia-lazer", placeholder="Sai em outra frequência? Qual?")
+		include ../slider-controls

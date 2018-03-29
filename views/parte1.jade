@@ -1,44 +1,49 @@
 extends layout
 
 block content
-	.shadow
+	//- .shadow
+	.counter(ng-controller="Counter")
+		span {{counter}}/
+			span.numberOfQuestions{{numberOfQuestions}}
 	.container
 		.row.justify-content-center
 			.col-md-12
 				form(action="/submit", method="post", autocomplete="on")
+					#carouselExampleControls.carousel.slide
+						.carousel-inner
+							// Qual seu nome e sobrenome?
+							include questions/q01
+							// O que você faz na cidade de São Paulo?
+							include questions/q02
+							// Em que local você nasceu?
+							include questions/q04
+							// Em que ano você nasceu?
+							include questions/q05
+							// Com qual gênero você se identifica?
+							include questions/q03
+							// Em relação à cor/etnia, como você se identifica?
+							include questions/q06
+							// Qual é sua fé?
+							include questions/q07
+							// Onde você mora? Você sabe seu CEP?
+							include questions/q08
+							// Na sua experiência, você relaciona a cidade de São Paulo com:
+							include questions/q09
+							// Você acha a maioria dos espaços ao ar livre de São Paulo:
+							include questions/q15
+							// Quais meios de transporte você usa para circular pela cidade?
+							include questions/q10
+							// Nesses transportes, quais problemas você enfrenta? 
+							include questions/q11
+							// Como você acessa informações sobre o que está acontecendo na cidade? 
+							include questions/q12
+							//- // Com que frequência você sai de casa para curtir a cidade?  
+							//- include questions/q13
+							// Com que frequência você sai de casa para curtir a cidade? 
+							include questions/q16
+							// Com que frequência você vive as situações abaixo quando sai para curtir a cidade?
+							include questions/q14
 
-					// Qual seu nome e sobrenome?
-					include questions/q01
-					// O que você faz na cidade de São Paulo?
-					include questions/q02
-					// Com qual gênero você se identifica?
-					include questions/q03
-					// Em que local você nasceu?
-					include questions/q04
-					// Em que ano você nasceu?
-					include questions/q05
-					// Em relação à cor/etnia, como você se identifica?
-					include questions/q06
-					// Qual é sua fé?
-					include questions/q07
-					// Onde você mora? Você sabe seu CEP?
-					include questions/q08
-					// Que palavras abaixo melhor ilustram o que você vive em São Paulo?
-					include questions/q09
-					// Quais meios de transporte você usa para circular pela cidade?
-					include questions/q10
-					// Quais dos problemas abaixo você enfrenta para circular na cidade? 
-					include questions/q11
-					// Como você acessa informações sobre o que está acontecendo na cidade? 
-					include questions/q12
-					// Com que frequência você sai de casa para curtir a cidade?  
-					include questions/q13
-					// O que geralmente acontece quando você sai para curtir a cidade? 
-					include questions/q14
 
-					.question-wrapper
-						.question
-							.form-group
-								button.btn.btn-primary(type="submit") Enviar
-				//- - for a in data
-				//- 	p #{a.name}, #{a.age}, #{a.city}, #{a.timestamp}
+					//- button.btn.btn-primary(type="submit") Enviar
+

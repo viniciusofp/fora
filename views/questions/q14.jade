@@ -1,120 +1,71 @@
-.question-wrapper
-	.question
-		p.enunciado O que geralmente acontece quando você sai para curtir a cidade? 
-		p.explain Selecione tudo que acontece com você!
+.question-wrapper.carousel-item
+	.question.frequencia
+		p.enunciado Com que frequência você vive as situações abaixo quando sai para curtir a cidade?
 		.row
-			.col-6
-				.row
-					.col-12.mt-5
-						p Faço as mesmas coisas, prefiro não arriscar
-					.col-4
-						.form-check
-							input#sempre1.form-check-input(type="radio", value="sempre", name="prefiro-nao-arriscar")
-							label.h6.form-check-label.h6(for="sempre1") Sempre
-					.col-4
-						.form-check
-							input#as-vezes1.form-check-input(type="radio", value="as-vezes", name="prefiro-nao-arriscar")
-							label.h6.form-check-label.h6(for="as-vezes1") Às vezes
-					.col-4
-						.form-check
-							input#nunca1.form-check-input(type="radio", value="nunca", name="prefiro-nao-arriscar")
-							label.h6.form-check-label.h6(for="nunca1") Nunca
-			.col-6
-				.row
-					.col-12.mt-5
-						p Sofro com racismo, machismo, homofobia e outras discriminações
-					.col-4
-						.form-check
-							input#sempre2.form-check-input(type="radio", value="sempre", name="sofro-discriminacao")
-							label.h6.form-check-label.h6(for="sempre2") Sempre
-					.col-4
-						.form-check
-							input#as-vezes2.form-check-input(type="radio", value="as-vezes", name="sofro-discriminacao")
-							label.h6.form-check-label.h6(for="as-vezes2") Às vezes
-					.col-4
-						.form-check
-							input#nunca2.form-check-input(type="radio", value="nunca", name="sofro-discriminacao")
-							label.h6.form-check-label.h6(for="nunca2") Nunca
-			.row
-				.col-6
-					.row
-						.col-12.mt-5
-							p Consigo ter acessibilidade física para aproveitar espaços e programações na cidade
-						.col-4
-							.form-check
-								input#sempre3.form-check-input(type="radio", value="sempre", name="tenho-acessibilidade")
-								label.h6.form-check-label.h6(for="sempre3") Sempre
-						.col-4
-							.form-check
-								input#as-vezes3.form-check-input(type="radio", value="as-vezes", name="tenho-acessibilidade")
-								label.h6.form-check-label.h6(for="as-vezes3") Às vezes
-						.col-4
-							.form-check
-								input#nunca3.form-check-input(type="radio", value="nunca", name="tenho-acessibilidade")
-								label.h6.form-check-label.h6(for="nunca3") Nunca
-				.col-6
-					.row
-						.col-12.mt-5
-							p Tenho grana para fazer os programas que eu gostaria
-						.col-4
-							.form-check
-								input#sempre4.form-check-input(type="radio", value="sempre", name="tenho-grana")
-								label.h6.form-check-label.h6(for="sempre4") Sempre
-						.col-4
-							.form-check
-								input#as-vezes4.form-check-input(type="radio", value="as-vezes", name="tenho-grana")
-								label.h6.form-check-label.h6(for="as-vezes4") Às vezes
-						.col-4
-							.form-check
-								input#nunca4.form-check-input(type="radio", value="nunca", name="tenho-grana")
-								label.h6.form-check-label.h6(for="nunca4") Nunca
-			.row
-				.col-6
-					.row
-						.col-12.mt-5
-							p Falta tempo para aproveitar espaços e programações que me interessam, tenho muitos compromissos
-						.col-4
-							.form-check
-								input#sempre5.form-check-input(type="radio", value="sempre", name="falta-tempo")
-								label.h6.form-check-label.h6(for="sempre5") Sempre
-						.col-4
-							.form-check
-								input#as-vezes5.form-check-input(type="radio", value="as-vezes", name="falta-tempo")
-								label.h6.form-check-label.h6(for="as-vezes5") Às vezes
-						.col-4
-							.form-check
-								input#nunca5.form-check-input(type="radio", value="nunca", name="falta-tempo")
-								label.h6.form-check-label.h6(for="nunca5") Nunca
-				.col-6
-					.row
-						.col-12.mt-5
-							p Passo por tensões e repressões de autoridades ou outros atores locais
-						.col-4
-							.form-check
-								input#sempre6.form-check-input(type="radio", value="sempre", name="sofro-tensoes-e-repressoes")
-								label.h6.form-check-label.h6(for="sempre6") Sempre
-						.col-4
-							.form-check
-								input#as-vezes6.form-check-input(type="radio", value="as-vezes", name="sofro-tensoes-e-repressoes")
-								label.h6.form-check-label.h6(for="as-vezes6") Às vezes
-						.col-4
-							.form-check
-								input#nunca6.form-check-input(type="radio", value="nunca", name="sofro-tensoes-e-repressoes")
-								label.h6.form-check-label.h6(for="nunca6") Nunca
-			.row
-				.col-6
-					.row
-						.col-12.mt-5
-							p Vivo encontros, surpresas e novidades agradáveis 
-						.col-4
-							.form-check
-								input#sempre7.form-check-input(type="radio", value="sempre", name="vivo-encontros")
-								label.h6.form-check-label.h6(for="sempre7") Sempre
-						.col-4
-							.form-check
-								input#as-vezes7.form-check-input(type="radio", value="as-vezes", name="vivo-encontros")
-								label.h6.form-check-label.h6(for="as-vezes7") Às vezes
-						.col-4
-							.form-check
-								input#nunca7.form-check-input(type="radio", value="nunca", name="vivo-encontros")
-								label.h6.form-check-label.h6(for="nunca7") Nunca
+			.col-12.col-md-6
+				p.sub-enunciado Fico com receio de novos programas, prefiro não me arriscar
+				.form-check.d-inline
+					input#sempre1.form-check-input(type="radio", value="sempre", name="prefiro-nao-arriscar")
+					label.form-check-label(for="sempre1") Sempre
+				.form-check.d-inline
+					input#as-vezes1.form-check-input(type="radio", value="as-vezes", name="prefiro-nao-arriscar")
+					label.form-check-label(for="as-vezes1") Às vezes
+				.form-check.d-inline
+					input#nunca1.form-check-input(type="radio", value="nunca", name="prefiro-nao-arriscar")
+					label.form-check-label(for="nunca1") Nunca
+			.col-12.col-md-6
+				p.sub-enunciado Sofro com racismo, machismo, homofobia e outras discriminações
+				.form-check.d-inline
+					input#sempre2.form-check-input(type="radio", value="sempre", name="sofro-discriminacao")
+					label.form-check-label(for="sempre2") Sempre
+				.form-check.d-inline
+					input#as-vezes2.form-check-input(type="radio", value="as-vezes", name="sofro-discriminacao")
+					label.form-check-label(for="as-vezes2") Às vezes
+				.form-check.d-inline
+					input#nunca2.form-check-input(type="radio", value="nunca", name="sofro-discriminacao")
+					label.form-check-label(for="nunca2") Nunca
+			.col-12.col-md-6
+				p.sub-enunciado Tenho acessibilidade física para aproveitar espaços e programações
+				.form-check.d-inline
+					input#sempre3.form-check-input(type="radio", value="sempre", name="tenho-acessibilidade")
+					label.form-check-label(for="sempre3") Sempre
+				.form-check.d-inline
+					input#as-vezes3.form-check-input(type="radio", value="as-vezes", name="tenho-acessibilidade")
+					label.form-check-label(for="as-vezes3") Às vezes
+				.form-check.d-inline
+					input#nunca3.form-check-input(type="radio", value="nunca", name="tenho-acessibilidade")
+					label.form-check-label(for="nunca3") Nunca
+			.col-12.col-md-6
+				p.sub-enunciado Tenho grana para fazer os programas que eu gostaria
+				.form-check.d-inline
+					input#sempre4.form-check-input(type="radio", value="sempre", name="tenho-grana")
+					label.form-check-label(for="sempre4") Sempre
+				.form-check.d-inline
+					input#as-vezes4.form-check-input(type="radio", value="as-vezes", name="tenho-grana")
+					label.form-check-label(for="as-vezes4") Às vezes
+				.form-check.d-inline
+					input#nunca4.form-check-input(type="radio", value="nunca", name="tenho-grana")
+					label.form-check-label(for="nunca4") Nunca
+			.col-12.col-md-6
+				p.sub-enunciado Passo por tensões e repressões de autoridades ou outros atores locais
+				.form-check.d-inline
+					input#sempre6.form-check-input(type="radio", value="sempre", name="sofro-tensoes-e-repressoes")
+					label.form-check-label(for="sempre6") Sempre
+				.form-check.d-inline
+					input#as-vezes6.form-check-input(type="radio", value="as-vezes", name="sofro-tensoes-e-repressoes")
+					label.form-check-label(for="as-vezes6") Às vezes
+				.form-check.d-inline
+					input#nunca6.form-check-input(type="radio", value="nunca", name="sofro-tensoes-e-repressoes")
+					label.form-check-label(for="nunca6") Nunca
+			.col-12.col-md-6
+				p.sub-enunciado Vivo encontros, surpresas e novidades agradáveis 
+				.form-check.d-inline
+					input#sempre7.form-check-input(type="radio", value="sempre", name="vivo-encontros")
+					label.form-check-label(for="sempre7") Sempre
+				.form-check.d-inline
+					input#as-vezes7.form-check-input(type="radio", value="as-vezes", name="vivo-encontros")
+					label.form-check-label(for="as-vezes7") Às vezes
+				.form-check.d-inline
+					input#nunca7.form-check-input(type="radio", value="nunca", name="vivo-encontros")
+					label.form-check-label(for="nunca7") Nunca
+		include ../slider-controls

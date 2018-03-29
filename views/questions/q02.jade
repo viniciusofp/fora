@@ -1,4 +1,4 @@
-.question-wrapper
+.question-wrapper.carousel-item
 	.question
 		p.enunciado O que você faz na cidade de São Paulo?
 		.form-group.form-group-check
@@ -12,5 +12,6 @@
 				input#estudo.sp-oquefaz.form-check-input(type="checkbox", value="true", name="sp-oquefaz-estudo")
 				label.form-check-label(for="estudo") Estudo
 			.form-check
-				input#sp-nenhum.sp-oquefaz.form-check-input(type="checkbox", value="true", name="sp-oquefaz-nenhum")
-				label.form-check-label(for="sp-nenhum") Nenhum dos acima, vou à São Paulo por outros motivos
+				input#sp-visito.sp-oquefaz.form-check-input(type="checkbox", value="true", name="sp-oquefaz-visito")
+				label.form-check-label(for="sp-visito") Visito
+		include ../slider-controls

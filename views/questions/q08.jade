@@ -1,7 +1,7 @@
-.question-wrapper(ng-controller="CEP")
+.question-wrapper.carousel-item(ng-controller="CEP")
 	.question
-		p.enunciado Onde você mora? Você sabe seu CEP? 
-		p.explain Não se preocupe. Com seu CEP não é possível identificar o local exato da sua casa, apenas a região aproximada. É importante para sabermos o alcance do questionário!
+		p.enunciado Qual seu CEP? 
+		p.explain Não se preocupe, não é possível saber onde você mora pelo CEP! Na pesquisa, ele serve apenas para saber aproximadamente em que área da cidade você mora!
 		.form-group
 				label.form-control-label(for="cep") Sim, meu CEP é:
 				input#cep.form-control(type="text", name="cep", placeholder="Outra")
@@ -9,6 +9,7 @@
 		.form-group
 				label.form-control-label(for="cep-radio") Não tenho CEP, mas moro em:
 				input#nao-tenho-cep.form-control(type="text", name="nao-tenho-cep", placeholder="Outra")
+		include ../slider-controls
 div#cep-modal.modal(tabindex="-1", role="dialog", aria-hidden="true", ng-controller="CEP")
 	div.modal-dialog.modal-dialog-centered(role="document")
 		div.modal-content

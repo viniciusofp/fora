@@ -1,4 +1,4 @@
-.question-wrapper
+.question-wrapper.carousel-item
 	.question
 		p.enunciado Como você acessa informações sobre o que está acontecendo na cidade?  
 		p.explain Pode marcar todas as opções que você usa!
@@ -10,6 +10,9 @@
 				.form-check
 					input#instagram.acesso-informacao.form-check-input(type="checkbox", value="instagram", name="acesso-informacao")
 					label.form-check-label(for="instagram") Instagram
+				.form-check
+					input#youtube.acesso-informacao.form-check-input(type="checkbox", value="youtube", name="acesso-informacao")
+					label.form-check-label(for="youtube") Youtube
 				.form-check
 					input#jornal-gratuito.acesso-informacao.form-check-input(type="checkbox", value="jornal-gratuito", name="acesso-informacao")
 					label.form-check-label(for="jornal-gratuito") Jornal impresso gratuito
@@ -41,7 +44,11 @@
 				.form-check
 					input#podcast.acesso-informacao.form-check-input(type="checkbox", value="podcast", name="acesso-informacao")
 					label.form-check-label(for="podcast") Podcast
+				.form-check
+					input#familiares-amigos.acesso-informacao.form-check-input(type="checkbox", value="familiares-amigos", name="acesso-informacao")
+					label.form-check-label(for="familiares-amigos") Com familiares, amigos, colegas de trabalho, etc.
 			.col-12
 			.form-group
 				label.form-control-label.text-primary Outros? Quais?
 				input.form-control(name="acesso-informacao")
+		include ../slider-controls

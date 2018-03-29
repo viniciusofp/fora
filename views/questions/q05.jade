@@ -1,5 +1,6 @@
-.question-wrapper
+.question-wrapper.carousel-item
 	.question
 		p.enunciado Em que ano você nasceu?
 		.form-group
 			input.form-control(type="number",name="ano_nascimento", autocomplete="byear", placeholder="YYYY", pattern="[0-9]{4}", max="2010", min="1910", required)
+		include ../slider-controls
