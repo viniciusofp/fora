@@ -141,3 +141,19 @@ app.controller('Counter', ['$scope', function($scope) {
     //   }
     // });
 }]);
+
+
+var questions = $('.question');
+
+$('#carouselExampleControls').on('slide.bs.carousel', function (e) {
+  var activeQuestion = $('.active').children()[0];
+    console.log($(e.relatedTarget).children()[0].clientHeight)
+  if (activeQuestion.clientHeight < window.innerHeight - 200) {
+    console.log('menor')
+    $(e.relatedTarget).children().addClass('absolute-center')
+    $(e.relatedTarget).children().removeClass('question-margin')
+  } else {
+    $(e.relatedTarget).children().removeClass('absolute-center')
+    $(e.relatedTarget).children().addClass('question-margin')
+  }
+})
