@@ -16,14 +16,14 @@ span.bar {
     top: 0;
     left: 0;
     width: 100%;
-    height: 120px;
+    height: 70px;
     /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#dadada+0,000000+100&1+0,0+100 */
     background: -moz-linear-gradient(top, rgba(218,218,218,1) 0%, rgba(0,0,0,0) 100%); /* FF3.6-15 */
     background: -webkit-linear-gradient(top, rgba(218,218,218,1) 0%,rgba(0,0,0,0) 100%); /* Chrome10-25,Safari5.1-6 */
     background: linear-gradient(to bottom, rgba(218,218,218,1) 0%,rgba(0,0,0,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#dadada', endColorstr='#00000000',GradientType=0 ); /* IE6-9 */
     z-index: 3;
-    border-top: 62px solid #dadada;
+    border-top: 50px solid #dadada;
 }
 
 .counter {
@@ -58,12 +58,17 @@ html {
     @include media-breakpoint-up(lg) {
         font-size: 1rem;
     }
+}.btn {
+    border-radius: 0;
+
+}
+.btn-cep {
+
 }
 
 .btn-primary {
     background: transparent;
     border: none;
-    border-radius: 0;
     padding-bottom: 0px;
     padding-left: 0;
     padding-right: 0;
@@ -88,9 +93,25 @@ html {
     left: 30px;
     font-style: italic;
     z-index: 5;
+    line-height: 32px;
+    font-size: 2rem;
     img {
-        margin-top: -20px;
-        margin-right: 45px;
+        height: 32px;
+        margin-top: -15px;
+        margin-right: 20px;
+    }
+    @media all and (max-width: 991px) {
+        font-size: 1.8rem;
+    }
+    @media all and (max-width: 767px) {
+        font-size: 1.5rem;
+        img {
+            margin-top: -10px;
+            height: 25px; 
+            line-height: 25px;
+            margin-right: 10px;
+        }
+        
     }
 }
 
@@ -114,11 +135,12 @@ html {
     // left: 50%;
     // transform: translate(-50%, -50%);
     display: block;
-    max-width: 800px;
+    max-width: 1000px;
     width: 100%;
     margin: 0 auto;
     transition: .2s;
-    padding: 30px;
+    padding: 30px 30px 60px;
+    margin-top: 90px;
     // opacity: .2;
     // &.focus {
     //     opacity: 1;
@@ -126,14 +148,12 @@ html {
 }
 
 .absolute-center {
+    margin-top: 0px!important;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
 
-}
-.question-margin {
-    margin-top: 100px;
 }
 .slider-nav {
     position: fixed;
@@ -143,6 +163,19 @@ html {
     img {
         max-height: 25px;
         width: auto;
+    }
+    @media all and (max-width: 575px) {
+        img {
+            height: 15px;
+        }
+    }
+    @media all and (max-width: 504px) {
+        right: 50%;
+        top: 70px; 
+        transform: translate(50%, 0);
+        img {
+            height: 15px;
+        }
     }
 }
 .prev-icon {
@@ -192,16 +225,18 @@ select,
 select.form-control {
 	background: #dadada;
 	border-radius: 0!important;
-	border: 5px solid #fff;
+	border: 2px solid #fff;
 	font-size: 1.2rem;
-	padding-top: 10px;
-	padding-bottom: 10px;
+	padding: 5px 10px;
     line-height: 2;
     max-width: 720px;
-    height: calc(2rem + 20px)!important;
+    height: calc(1.5rem + 16px)!important;
     &:focus {
-        border: 5px solid $primary;
+        border: 2px solid $primary;
         background: #dadada;
+    }
+    &:hover {
+        background: #fff;
     }
 }
 
@@ -215,18 +250,21 @@ select.form-control {
     cursor: pointer;
 }
 
-label {
-	font-size: 1.2rem;
-    line-height: 2;
-    cursor: pointer;
-    &:hover {
-        font-weight: 600;
+.form-check {
+    margin-left: 20px;
+    margin-right: 50px;
+    margin-bottom: 10px;
+    &.d-inline-block {
+        margin-bottom: 30px;
     }
-}
-label input {
-    display: inline!important;
-    font-size: 1.2rem!important;
-    padding: 3px 5px!important
+    label {
+        font-size: 1.2rem;
+        line-height: 2;
+        cursor: pointer;
+        &:hover {
+            color: $primary;
+        }
+    }
 }
 
 input:focus,
@@ -244,6 +282,19 @@ input[type=checkbox] {
     height: 30px;
     cursor: pointer;
 }
+
+.form-group-radio .form-check {
+    margin-left: calc(-1.25rem);
+    display: inline-block;
+}
+input[type=radio] {
+    display: none;
+}
+input[type="checkbox"] {
+    &+label {
+        margin-left: 5px;
+    }
+}
 input[type=radio]::after,
 input[type=checkbox]::after {
     content: '( )';
@@ -251,10 +302,10 @@ input[type=checkbox]::after {
     width: 50px;
     height: 35px;
     position: absolute;
-    top: -3px;
-    left: -20px;
+    top: 0;
+    left: -15px;
     visibility: visible;
-    line-height: 2;
+    line-height: 1.4;
 }
 
 
@@ -272,24 +323,30 @@ input[type=checkbox]:checked {
     &+label {
         color: $primary;
         font-weight: 600;
+        input[type="text"] {
+            color: $primary;
+            font-weight: 600;
+            border-color: $primary;
+        }
     }
 }
 input[type=radio]::before,
 input[type=checkbox]::before {
     content: 'X';
     position: absolute;
-    top: 2px;
-    left: -11px;
+    top: 0px;
+    left: -6px;
     visibility: visible;
     color: blue;
     opacity: 0;
     transition: .4s;
     line-height: 1.5;
 }
-
-.form-check {
-	margin-left: 30px;
+label input {
+    display: inline!important;
+    padding: 5px 10px!important
 }
+
 
 .arlivre {
     margin-bottom: 30px;
@@ -307,9 +364,10 @@ input[type=checkbox]::before {
     .form-check {
         padding-left: 0;
         margin-left: 0;
+        margin-right: 0;
         &:last-of-type {
             label {
-                border-right: 2px solid $primary;
+                // border-right: 2px solid $primary;
             }
         }
     }
@@ -317,7 +375,7 @@ input[type=checkbox]::before {
         display: none;
     }
     label {
-        border: 2px solid $primary;
+        border-bottom: 2px solid $primary;
         border-right: 0;
         padding: 0 10px;
         transition: .5s;
@@ -331,69 +389,15 @@ input[type=checkbox]::before {
     input[type=checkbox]:checked {
         &+label {
             color: $white;
-            background: $primary;
+            background: transparent;
+            box-shadow: inset 0px -50px blue;
             font-weight: 600;
-            box-shadow: inset 0px 0px blue;
         }
     }
 }
-
-.arlivre {
-    .form-check:first-of-type {
-        input[type=radio]:checked,
-        input[type=checkbox]:checked {
-            &+label {
-                color: $white;
-                background: transparent;
-                box-shadow: inset -170px 0px blue;
-                font-weight: 600;
-            }
-        }
-    }
-    .form-check:nth-of-type(2) {
-        input[type=radio]:checked,
-        input[type=checkbox]:checked {
-            &+label {
-                color: $white;
-                background: transparent;
-                box-shadow: inset 170px 0px blue;
-                font-weight: 600;
-            }
-        }
-    }
+.frequencia-lazer-label {
+    font-family: 'Interval', monospace;
+    font-size: 14px!important;
 }
 
 
-
-
-.slide {
-    .carousel-inner {
-        .item {
-            transition-property: opacity;
-        }
-        
-        .item,
-        .active.left,
-        .active.right {
-            opacity: 0;
-        }
-
-        .active,
-        .next.left,
-        .prev.right {
-            opacity: 1;
-        }
-
-        .next,
-        .prev,
-        .active.left,
-        .active.right {
-            left: 0;
-            transform: translate3d(0, 0, 0);
-        }
-    }
-
-    .carousel-control {
-        z-index: 2;
-    }
-}

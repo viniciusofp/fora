@@ -1,27 +1,33 @@
 .question-wrapper.carousel-item
 	.question
 		p.enunciado Com qual gênero você se identifica?
-		.form-group.form-group-check
-			.form-check
-				input#homem.genero.form-check-input(type="radio", value="homem", name="genero", required)
-				label.form-check-label(for="homem") Homem
-			.form-check
-				input#mulher.genero.form-check-input(type="radio", value="mulher", name="genero", required)
-				label.form-check-label(for="mulher") Mulher
-			.form-check
-				input#homem-trans.genero.form-check-input(type="radio", value="homem-trans", name="genero", required)
-				label.form-check-label(for="homem-trans") Homem Trans
-			.form-check
-				input#mulher-trans.genero.form-check-input(type="radio", value="mulher-trans", name="genero", required)
-				label.form-check-label(for="mulher-trans") Mulher Trans
-			.form-check
-				input#travesti.genero.form-check-input(type="radio", value="travesti", name="genero", required)
-				label.form-check-label(for="travesti") Travesti
-			.form-check
-				input#nao-binario.genero.form-check-input(type="radio", value="nao-binario", name="genero", required)
-				label.form-check-label(for="nao-binario") Não Binário
-			.form-check
-				input#outro_genero.genero.form-check-input(type="radio", value="outro", name="genero", required)
-				label.form-check-label(for="outro_genero")
-					input#outro_genero_input.form-control(type="text", name="genero_outro", placeholder="Nenhum desses")
+		.form-group.form-group-check.form-group-radio
+			.row
+				.col-12.col-sm-auto
+					.form-check.d-block
+						input#homem.genero.form-check-input(type="radio", value="homem", name="genero", required)
+						label.form-check-label(for="homem") Homem
+					.form-check.d-block
+						input#mulher.genero.form-check-input(type="radio", value="mulher", name="genero", required)
+						label.form-check-label(for="mulher") Mulher
+				.col-12.col-sm-auto
+					.form-check.d-block
+						input#homem-trans.genero.form-check-input(type="radio", value="homem-trans", name="genero", required)
+						label.form-check-label(for="homem-trans") Homem Trans
+					.form-check.d-block
+						input#mulher-trans.genero.form-check-input(type="radio", value="mulher-trans", name="genero", required)
+						label.form-check-label(for="mulher-trans") Mulher Trans
+				.col-12.col-sm-auto
+					.form-check.d-block
+						input#travesti.genero.form-check-input(type="radio", value="travesti", name="genero", required)
+						label.form-check-label(for="travesti") Travesti
+					.form-check.d-block
+						input#nao-binario.genero.form-check-input(type="radio", value="nao-binario", name="genero", required)
+						label.form-check-label(for="nao-binario") Não Binário
+
+				.col-12.col-md-auto
+					.form-check.d-block
+						input#outro_genero.genero.form-check-input(type="radio", value="outro", name="genero", required)
+						label.form-check-label(for="outro_genero")
+							input#outro_genero_input.form-control(type="text", name="genero_outro", placeholder="Nenhum desses")
 		include ../slider-controls

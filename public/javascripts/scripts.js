@@ -1,10 +1,3 @@
-$(function() {
-
-  $("body").prognroll({
-    height: 8, //Progress bar height
-  });
-});
-
 $(document).ready(function() {
     setTimeout(function() {
         window.scrollTo(0, 0);
@@ -148,7 +141,7 @@ var questions = $('.question');
 $('#carouselExampleControls').on('slide.bs.carousel', function (e) {
   var activeQuestion = $('.active').children()[0];
     console.log($(e.relatedTarget).children()[0].clientHeight)
-  if (activeQuestion.clientHeight < window.innerHeight - 200) {
+  if (activeQuestion.clientHeight < window.innerHeight - 180) {
     console.log('menor')
     $(e.relatedTarget).children().addClass('absolute-center')
     $(e.relatedTarget).children().removeClass('question-margin')
