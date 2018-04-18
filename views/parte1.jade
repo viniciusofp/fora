@@ -1,10 +1,8 @@
 extends layout
 
 block content
-	//- .shadow
-	.counter(ng-controller="Counter")
-		span {{counter}}/
-			span.numberOfQuestions{{numberOfQuestions}}
+	.progress-bar-q
+		.question-bar
 	.container-fluid
 		.row.justify-content-center
 			.col-md-12(style="padding: 0")
@@ -43,7 +41,7 @@ block content
 							//- Quem Trabalha/Estuda!
 							// Qual é o espaço público* que você frequenta mais perto do seu local de trabalho ou estudo?
 							include questions/q21
-							// Na sua opinião, o que você faria para melhorar esse espaço público* perto da sua casa?
+							// Na sua opinião, o que você faria para melhorar esse espaço público* perto do seu local de trabalho ou estudo?
 							include questions/q22
 							//- Quem Mora/Trabalha/Estuda!
 							// Nos últimos três meses, com que frequência você saiu para curtir* a cidade de São Paulo? 

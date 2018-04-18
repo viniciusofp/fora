@@ -18,14 +18,29 @@ span.bar {
     padding: 200px!important;
 }
 
-.counter {
+.progress-bar-q {
+    display: block;
     position: fixed;
-    bottom: 15px;
-    right: 15px;
-    font-size: 1.5rem;
-    .numberOfQuestions {
-        color: $primary;
-        font-weight: 600;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 10px;
+    .question-bar {
+        height: 10px;
+        background: blue;
+        display: inline-block;
+        float: left;
+    }
+}
+
+@for $i from 1 through 2 {
+    .question-bar:nth-child(#{$i}) {
+        background: red;
+    }
+}
+@for $i from 3 through 7 {
+    .question-bar:nth-child(#{$i}) {
+        background: orange;
     }
 }
 
@@ -397,8 +412,18 @@ select.form-control:not([size]):not([multiple]) {
     background-image: url('/images/oqvcfaz.jpg');
 }
 
+.secao-1 {
+    .enunciado, .obs {
+        color: red;
+    }
+    input:checked + label {
+        background-color: red!important;
+    }
+
+}
+
 .secao-2 {
-    .enunciado {
+    .enunciado, .obs {
         color: $orange;
     }
     input:checked + label {
@@ -406,7 +431,7 @@ select.form-control:not([size]):not([multiple]) {
     }
 }
 .secao-3 {
-    .enunciado {
+    .enunciado, .obs {
         color: $primary;
     }
     input:checked + label {
@@ -439,7 +464,7 @@ svg#Camada_1 {
 }
 #Camada_1 path {
     transition: .2s;
-    stroke: white;
+    stroke: #dadbda;
     stroke-width: 5px;
     opacity: .6;
 }

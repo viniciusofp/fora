@@ -133,42 +133,7 @@ app.controller('CEP', ['$scope', '$resource', '$q', function($scope, $resource, 
         // console.log(urlString)
     }
 }]);
-app.controller('Counter', ['$scope', function($scope) {
-    $scope.counter = 0;
-    $scope.numberOfQuestions = $('.question').length;
-    $('.next-icon').click(function() {
-        $scope.$apply(function(){
-            $scope.counter = $scope.counter + 1
-        });
-    })
-    $('.next-icon').click(function() {
-        $scope.$apply(function(){
-            $scope.counter = $scope.counter - 1
-        });
-    })
-    // $('.question').waypoint(function(direction) {
-    //     if (direction == "down") {
-    //         console.log($scope.counter)
-    //         $scope.$apply(function(){
-    //             $scope.counter = $scope.counter + 1
-    //         });
-    //     }
-    // }, {
-    //   offset: '50%'
-    // });
-    // $('.question').waypoint(function(direction) {
-    //     if (direction == "up") {
-    //         console.log($scope.counter)
-    //         $scope.$apply(function(){
-    //             $scope.counter = $scope.counter - 1
-    //         });
-    //     }
-    // }, {
-    //   offset: function() {
-    //     return window.innerHeight / 2 - this.element.clientHeight
-    //   }
-    // });
-}]);
+
 
 
 var questions = $('.question');
@@ -273,8 +238,11 @@ $('.sp-oquefaz').change(function() {
 })
 
 
+$('.quemmora').remove();
+$('.quemtrabalhaestuda').remove();
+$('.quemmoratrabalhaestuda').remove();
+$('.quemnenhum').remove();
 $('#carouselExampleControls').on('slide.bs.carousel', function (e) {
-    console.log(e)
     if (e.direction == 'left') {
         if ($(e.relatedTarget).hasClass('cep')) {
             $('.quemmora').remove();
@@ -332,6 +300,11 @@ $('#carouselExampleControls').on('slide.bs.carousel', function (e) {
         $('#circulacao').val(places)
     })
 
+var questions = $('.question');
+var questionsLength = questions.length;
+var questionsWidth =window.innerWidth / questionsLength;
+$('.question-bar').css('width', questionsWidth);
+
 $('#carouselExampleControls').on('slid.bs.carousel', function (e) {
     if ($(e.relatedTarget).hasClass('secao-1')) {
         $('.brand').css('fill', 'red')
@@ -342,4 +315,14 @@ $('#carouselExampleControls').on('slid.bs.carousel', function (e) {
     if ($(e.relatedTarget).hasClass('secao-3')) {
         $('.brand').css('fill', 'blue')
     }
+    var questions = $('.question');
+    var questionsLength = questions.length;
+    var questionsWidth =window.innerWidth / questionsLength;
+    console.log(questionsWidth)
+    if (e.direction == 'left') {
+        $('.progress-bar-q').append('<div class="question-bar"></div>')
+    } else {
+        $('.question-bar:last-child').remove();
+    }
+    $('.question-bar').css('width', questionsWidth)
 })

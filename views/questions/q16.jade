@@ -1,7 +1,6 @@
 .question-wrapper.carousel-item.secao-3.quemmoratrabalhaestuda
 	.question
 		p.enunciado Nos últimos três meses, com que frequência você saiu para curtir* a cidade de São Paulo?
-		p.explain Atividades sociais, culturais, esportivas, lazer, etc.
 		.form-group.form-check-group
 			.form-check
 				input#quase-todo-dia.frequencia-lazer.form-check-input(type="radio", value="5 a 7", name="frequencia-lazer", required)
@@ -18,4 +17,6 @@
 			.form-check
 				input#saio-muito-pouco-mesmo.frequencia-lazer.form-check-input(type="radio", value="1 por mes ou menos", name="frequencia-lazer", required)
 				label.frequencia-lazer-label.form-check-label.frequencia-lazer-label(for="saio-muito-pouco-mesmo") 1 vez por mês ou menos
+		
+		.obs * Tempo livre, atividades sociais, culturais, esportivas, lazer, etc.
 		include ../slider-controls
