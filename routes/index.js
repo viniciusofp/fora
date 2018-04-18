@@ -9,7 +9,7 @@ router.get('/', function(req, res, next) {
   res.render('index', { title: 'Express' });
 });
 /* GET home page. */
-router.get('/parte-um', function(req, res, next) {
+router.get('/questionario', function(req, res, next) {
   if (req.cookies.userid) {
     console.log('I have an ID already, thank you')
   } else {

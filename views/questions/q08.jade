@@ -1,30 +1,30 @@
-.question-wrapper.carousel-item(ng-controller="CEP")
+.question-wrapper.carousel-item.cep.secao-3(ng-controller="CEP")
 	.question
 		p.enunciado Qual seu CEP? 
 		p.explain Não se preocupe, não é possível saber onde você mora pelo CEP! Na pesquisa, ele serve apenas para saber aproximadamente em que área da cidade você mora!
-		p.sub-enunciado Sim, meu CEP é:
+		p.sub-enunciado Meu CEP é:
 		.row
 			.col-6.col-sm-4.col-md-3
-				input#cep.form-control(type="text", name="cep", placeholder="Outra")
+				input#cep.form-control.short(type="text", name="cep")
 			.col-12
 				div#naosei_cep.btn.btn-outline-primary.btn-sm.mt-3.mb-4(data-toggle="modal", data-target="#cep-modal") Não sei meu CEP
 
 		p.sub-enunciado Não tenho CEP, mas moro em:
 		.form-group
-			input#nao-tenho-cep.form-control.mb-4(type="text", name="nao-tenho-cep", placeholder="Outra")
+			input#nao-tenho-cep.form-control.mb-4(type="text", name="nao-tenho-cep", autocomplete="off")
 		include ../slider-controls
 div#cep-modal.modal(tabindex="-1", role="dialog", aria-hidden="true", ng-controller="CEP")
 	div.modal-dialog.modal-dialog-centered(role="document")
 		div.modal-content
 			div.modal-body
-				.form-control
-					h5 Rua
-					input#rua-cep
-				.form-control
-					h5 Cidade
-					input#cidade-cep
-				.form-control
-					h5 Estado
-					input#estado-cep
-				.form-control
-					div.btn.btn-primary(ng-click="buscaCep()") GO
+				.form-group
+					span.sub-enunciado Rua
+					input.form-control#rua-cep
+				.form-group
+					span.sub-enunciado Cidade
+					input.form-control#cidade-cep(value="São Paulo")
+				.form-group
+					span.sub-enunciado Estado
+					input.form-control#estado-cep(value="SP")
+				.form-group
+					div.btn.btn-primary(ng-click="buscaCep()") Buscar CEP

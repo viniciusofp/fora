@@ -1,24 +1,26 @@
-.question-wrapper.carousel-item
+.question-wrapper.carousel-item.secao-2
 	.question
 		p.enunciado Em relação à cor/etnia, como você se identifica?
-		.form-group.form-group-check.form-group-radio
-			.form-check
-				input#preta.cor.form-check-input(type="radio", value="preta", name="cor", required)
-				label.form-check-label(for="preta") Preto(a)
-			.form-check
-				input#parda.cor.form-check-input(type="radio", value="parda", name="cor", required)
-				label.form-check-label(for="parda") Pardo(a)
-			.form-check
-				input#branca.cor.form-check-input(type="radio", value="branca", name="cor", required)
-				label.form-check-label(for="branca") Branco(a)
-			.form-check
-				input#indigena.cor.form-check-input(type="radio", value="indigena", name="cor", required)
-				label.form-check-label(for="indigena") Indígena
-			.form-check
-				input#amarela.cor.form-check-input(type="radio", value="amarela", name="cor", required)
-				label.form-check-label(for="amarela") Amarelo(a)
-			.form-check
-				input#outra_cor.cor.form-check-input(type="radio", value="outro", name="cor", required)
-				label.form-check-label(for="outra_cor")
-					input#outra_cor_input.form-control(type="text", name="cor_outra", placeholder="Outra")
+		.form-group.form-check-group.row
+			.col-sm-6
+				.form-check
+					input#asiatica.cor.form-check-input(type="radio", value="asiatica", name="cor", required)
+					label.form-check-label(for="asiatica") Asiática
+				.form-check
+					input#branca.cor.form-check-input(type="radio", value="branca", name="cor", required)
+					label.form-check-label(for="branca") Branca
+				.form-check
+					input#preta.cor.form-check-input(type="radio", value="preta-negra", name="cor", required)
+					label.form-check-label(for="preta") Negra  / Preta
+			.col-sm-6
+				.form-check
+					input#indigena.cor.form-check-input(type="radio", value="indigena", name="cor", required)
+					label.form-check-label(for="indigena") Indígena / Povos Originários
+				.form-check
+					input#oriente-medio.cor.form-check-input(type="radio", value="oriente-medio", name="cor", required)
+					label.form-check-label(for="oriente-medio") Oriente Médio e/ou Norte da África
+				.form-check
+					input#outra-cor.cor.form-check-input(type="radio", value="outro", name="cor", required)
+					label.form-check-label(for="outra-cor") Nenhum desses, me identifico como:
+						input#outra-cor-input.form-control(type="text", name="cor_outra", placeholder="Outra")
 		include ../slider-controls

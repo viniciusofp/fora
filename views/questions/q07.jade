@@ -1,33 +1,43 @@
-.question-wrapper.carousel-item
-	.question
+.question-wrapper.carousel-item.secao-2
+	.question.center
 		p.enunciado Qual é sua fé?
-		.form-group.form-group-check.form-group-radio
-			.form-check.d-inline-block
-				input#agnostica.religiao.form-check-input(type="radio", value="agnostica", name="religiao", required)
-				label.form-check-label(for="agnostica") Agnóstica
-			.form-check.d-inline-block
-				input#ateia.religiao.form-check-input(type="radio", value="ateia", name="religiao", required)
-				label.form-check-label(for="ateia") Ateia
-			.form-check.d-inline-block
-				input#catolica.religiao.form-check-input(type="radio", value="catolica", name="religiao", required)
-				label.form-check-label(for="catolica") Católica
-			.form-check.d-inline-block
-				input#espirita.religiao.form-check-input(type="radio", value="espirita", name="religiao", required)
-				label.form-check-label(for="espirita") Espírita
-			.form-check.d-inline-block
-				input#evangelica.religiao.form-check-input(type="radio", value="evangelica", name="religiao", required)
-				label.form-check-label(for="evangelica") Evangélica
-			.form-check.d-inline-block
-				input#judaica.religiao.form-check-input(type="radio", value="judaica", name="religiao", required)
-				label.form-check-label(for="judaica") Judaica
-			.form-check.d-inline-block
-				input#matriz_africana.religiao.form-check-input(type="radio", value="matriz_africana", name="religiao", required)
-				label.form-check-label(for="matriz_africana") Matriz Africana
-			.form-check.d-inline-block
-				input#muculmana.religiao.form-check-input(type="radio", value="muculmana", name="religiao", required)
-				label.form-check-label(for="muculmana") Muçulmana
-			.form-check.d-inline-block
-				input#outra_religiao.religiao.form-check-input(type="radio", value="outro", name="religiao", required)
-				label.form-check-label(for="outra_religião")
-					input#outra_religiao_input.form-control(type="text", name="religiao_outra", placeholder="Outra? Qual?")
+		.form-group.form-check-group
+			.row
+				.col-sm-6
+					.form-check
+						input#sem-religiao.religiao.form-check-input(type="radio", value="sem-religiao", name="religiao", required)
+						label.form-check-label(for="sem-religiao") Sem Religião
+							.explain (agnósticos/as, ateus/ateia, e outros céticos)
+					.form-check
+						input#budista-hinduista.religiao.form-check-input(type="radio", value="budista-hinduista", name="religiao", required)
+						label.form-check-label(for="budista-hinduista") Budista / Hinduísta
+							.explain (ou outras orientais)
+					.form-check
+						input#catolica.religiao.form-check-input(type="radio", value="catolica", name="religiao", required)
+						label.form-check-label(for="catolica") Católica
+					.form-check
+						input#espirita.religiao.form-check-input(type="radio", value="espirita", name="religiao", required)
+						label.form-check-label(for="espirita") Espírita
+					.form-check
+						input#evangelica.religiao.form-check-input(type="radio", value="evangelica", name="religiao", required)
+						label.form-check-label(for="evangelica") Evangélica
+				.col-sm-6
+					.form-check
+						input#judaica.religiao.form-check-input(type="radio", value="judaica", name="religiao", required)
+						label.form-check-label(for="judaica") Judaica
+					.form-check
+						input#matriz_africana.religiao.form-check-input(type="radio", value="matriz_africana", name="religiao", required)
+						label.form-check-label(for="matriz_africana") Matriz Africana
+							.explain (candomblecistas, umbandistas ou outras afrobrasileiras)
+					.form-check
+						input#muculmana.religiao.form-check-input(type="radio", value="muculmana", name="religiao", required)
+						label.form-check-label(for="muculmana") Muçulmana
+					.form-check
+						input#tradicional.religiao.form-check-input(type="radio", value="tradicional", name="religiao", required)
+						label.form-check-label(for="tradicional") Tradicional
+							.explain (de povos originários brasileiros)
+					.form-check
+						input#outra-religiao.religiao.form-check-input(type="radio", value="outro", name="religiao", required)
+						label.form-check-label(for="outra-religiao") Outra
+							input#outra-religiao-input.form-control(type="text", name="religiao_outra", placeholder="Qual?")
 		include ../slider-controls

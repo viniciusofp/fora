@@ -1,0 +1,33 @@
+.question-wrapper.carousel-item
+	.question
+		p.enunciado.red Na sua opinião, quem deve participar das decisões sobre os espaços públicos*?
+		.form-check-group.decisoes.row
+			.col-sm-6
+				.form-check
+					input#voce(type="checkbox", name="decisoes" value="Você")
+					label(for="voce") Você
+				.form-check
+					input#governo(type="checkbox", name="decisoes" value="Prefeitura e outros órgãos governamentais")
+					label(for="governo") Prefeitura e outros órgãos governamentais
+				.form-check
+					input#empresas(type="checkbox", name="decisoes" value="Empresas")
+					label(for="empresas") Empresas
+				.form-check
+					input#ongs(type="checkbox", name="decisoes" value="ONGs")
+					label(for="ongs") ONGs
+			.col-sm-6
+				.form-check
+					input#associacoes-moradores(type="checkbox", name="decisoes" value="Associações de moradores")
+					label(for="associacoes-moradores") Associações de moradores
+				.form-check
+					input#todo-morador(type="checkbox", name="decisoes" value="Todo/qualquer morador do local")
+					label(for="todo-morador") Todo/qualquer morador do local
+				.form-check
+					input#decisoes-outro(type="checkbox", name="decisoes" value="Outros")
+					label(for="decisoes-outro") Outros
+						input#decisoes-outro-input(type="text", name="decisoes-outro" value="" placeholder="Quem?")
+		.obs
+			p * Espaços de acesso e uso público para encontros e convívio: ruas, praças, parques, calçadas, áreas verdes, passagens, etc.
+
+
+		include ../slider-controls

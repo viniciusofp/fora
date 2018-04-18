@@ -1,22 +1,21 @@
-.question-wrapper.carousel-item
+.question-wrapper.carousel-item.secao-3.quemmoratrabalhaestuda
 	.question
-		p.enunciado Com que frequência você sai de casa para curtir a cidade?
+		p.enunciado Nos últimos três meses, com que frequência você saiu para curtir* a cidade de São Paulo?
 		p.explain Atividades sociais, culturais, esportivas, lazer, etc.
-		.form-group.form-group-check
+		.form-group.form-check-group
 			.form-check
-				input#quase-todo-dia.frequencia-lazer.form-check-input(type="radio", value="quase-todo-dia", name="frequencia-lazer", required)
-				label.frequencia-lazer-label.form-check-label.frequencia-lazer-label(for="quase-todo-dia") “Saio (quase) todos os dias numa semana normal” (5 a 7 vezes por semana) 
+				input#quase-todo-dia.frequencia-lazer.form-check-input(type="radio", value="5 a 7", name="frequencia-lazer", required)
+				label.frequencia-lazer-label.form-check-label.frequencia-lazer-label(for="quase-todo-dia") 5 a 7 vezes por semana
 			.form-check
-				input#finais-de-semana.frequencia-lazer.form-check-input(type="radio", value="finais-de-semana", name="frequencia-lazer", required)
-				label.frequencia-lazer-label.form-check-label.frequencia-lazer-label(for="finais-de-semana") “Saio nos finais de semana, às vezes até mais dias” (2 a 4 vezes por semana)
+				input#finais-de-semana.frequencia-lazer.form-check-input(type="radio", value="2 a 4", name="frequencia-lazer", required)
+				label.frequencia-lazer-label.form-check-label.frequencia-lazer-label(for="finais-de-semana") 2 a 4 vezes por semana
 			.form-check
-				input#saio-pouco.frequencia-lazer.form-check-input(type="radio", value="saio-pouco", name="frequencia-lazer", required)
-				label.frequencia-lazer-label.form-check-label.frequencia-lazer-label(for="saio-pouco") “Saio pouco, mas não perco um programa aqui e ali” (entre uma vez por semana e uma vez a cada 2 semanas)
+				input#saio-pouco.frequencia-lazer.form-check-input(type="radio", value="1 por semana", name="frequencia-lazer", required)
+				label.frequencia-lazer-label.form-check-label.frequencia-lazer-label(for="saio-pouco") Uma vez por semana
 			.form-check
-				input#saio-muito-pouco.frequencia-lazer.form-check-input(type="radio", value="saio-muito-pouco", name="frequencia-lazer", required)
-				label.frequencia-lazer-label.form-check-label.frequencia-lazer-label(for="saio-muito-pouco") “Saio só para ocasiões especiais” (uma vez por mês ou menos)
+				input#saio-muito-pouco.frequencia-lazer.form-check-input(type="radio", value="1 a cada 2 semanas", name="frequencia-lazer", required)
+				label.frequencia-lazer-label.form-check-label.frequencia-lazer-label(for="saio-muito-pouco") Uma vez a cada duas semanas
 			.form-check
-				input#outra_frequencia.frequencia-lazer.form-check-input(type="radio", value="outro", name="frequencia-lazer", required)
-				label.frequencia-lazer-label.form-check-label.frequencia-lazer-label(for="outra_cor")
-			input#outra_frequencia_input.form-control(type="text", name="outra-frequencia-lazer", placeholder="Sai em outra frequência? Qual?")
+				input#saio-muito-pouco-mesmo.frequencia-lazer.form-check-input(type="radio", value="1 por mes ou menos", name="frequencia-lazer", required)
+				label.frequencia-lazer-label.form-check-label.frequencia-lazer-label(for="saio-muito-pouco-mesmo") 1 vez por mês ou menos
 		include ../slider-controls

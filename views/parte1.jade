@@ -1,23 +1,25 @@
 extends layout
 
 block content
-	.shadow
+	//- .shadow
 	.counter(ng-controller="Counter")
 		span {{counter}}/
 			span.numberOfQuestions{{numberOfQuestions}}
-	.container
+	.container-fluid
 		.row.justify-content-center
-			.col-md-12
+			.col-md-12(style="padding: 0")
 				form(action="/submit", method="post", autocomplete="on")
 					#carouselExampleControls.carousel.slide
 						.carousel-inner
-							// Qual seu nome e sobrenome?
-							include questions/q01
-							// O que você faz na cidade de São Paulo?
-							include questions/q02
-							// Em que local você nasceu?
-							include questions/q04
-							// Em que ano você nasceu?
+							// Qual a relevância dos espaços públicos* para sua vida?
+							include questions/q17
+							// Na sua opinião, quem deve participar das decisões sobre os espaços públicos*? 
+							include questions/q18
+							//- // Qual seu nome e sobrenome?
+							//- include questions/q01
+							//- // Em que local você nasceu?
+							//- include questions/q04
+							// Qual seu Nome? Em que ano você nasceu?
 							include questions/q05
 							// Com qual gênero você se identifica?
 							include questions/q03
@@ -25,26 +27,56 @@ block content
 							include questions/q06
 							// Qual é sua fé?
 							include questions/q07
-							// Onde você mora? Você sabe seu CEP?
-							include questions/q08
-							// Na sua experiência, você relaciona a cidade de São Paulo com:
-							include questions/q09
-							// Você acha a maioria dos espaços ao ar livre de São Paulo:
-							include questions/q15
-							// Quais meios de transporte você usa para circular pela cidade?
-							include questions/q10
-							// Nesses transportes, quais problemas você enfrenta? 
-							include questions/q11
 							// Como você acessa informações sobre o que está acontecendo na cidade? 
 							include questions/q12
+							// Na sua experiência, você relaciona a cidade de São Paulo com:
+							include questions/q09
+							// O que você faz na cidade de São Paulo?
+							include questions/q02
+							// Onde você mora? Você sabe seu CEP?
+							include questions/q08
+							//- Quem Mora!
+							// Qual é o espaço público* que você frequenta mais perto da sua casa? 
+							include questions/q19
+							// Na sua opinião, o que você faria para melhorar esse espaço público* perto da sua casa?
+							include questions/q20
+							//- Quem Trabalha/Estuda!
+							// Qual é o espaço público* que você frequenta mais perto do seu local de trabalho ou estudo?
+							include questions/q21
+							// Na sua opinião, o que você faria para melhorar esse espaço público* perto da sua casa?
+							include questions/q22
+							//- Quem Mora/Trabalha/Estuda!
+							// Nos últimos três meses, com que frequência você saiu para curtir* a cidade de São Paulo? 
+							include questions/q16
+							// O que você costuma fazer quando sai para curtir* em São Paulo?
+							include questions/q23
+							// Porque você não sai mais vezes para curtir* em São Paulo?
+							include questions/q24
+
+							//- Quem não mora, trabalha ou estuda
+							// Nos últimos três meses, com que frequência você foi à cidade de São Paulo?
+							include questions/q25
+							// O que você costuma fazer em São Paulo?
+							include questions/q26
+
+							//-Tdx
+							// Por onde você circula em São Paulo?
+							include questions/q27
+							//- include questions/q15
+							// Quais meios de transporte você usa para circular pela cidade?
+							include questions/q10
+							//- // Nesses transportes, quais problemas você enfrenta? 
+							//- include questions/q11
 							//- // Com que frequência você sai de casa para curtir a cidade?  
 							//- include questions/q13
-							// Com que frequência você sai de casa para curtir a cidade? 
-							include questions/q16
-							// Com que frequência você vive as situações abaixo quando sai para curtir a cidade?
+							// Quais são seus espaços públicos* favoritos de São Paulo?
+							include questions/q29
+							// Na sua vivência em São Paulo, com que frequência você: 
 							include questions/q14
+							// Se tiver algum comentário ou reflexão, escreva aqui:
+							include questions/q28
 							.question-wrapper.carousel-item
-								.question.absolute-center
+								.question.absolutecenter
 										button.btn.btn-lg.btn-primary(type="submit") Enviar
 	.slider-nav
 		a(href='#carouselExampleControls', role='button', data-slide='prev')

@@ -1,17 +1,20 @@
-.question-wrapper.carousel-item
+.img-right.img-right-oqvcfaz
+.question-wrapper.carousel-item.oqvcfaz.secao-3
 	.question
-		p.enunciado O que você faz na cidade de São Paulo?
-		.form-group.form-group-check
-			.form-check.d-inline-block
-				input#moro.sp-oquefaz.form-check-input(type="checkbox", value="true", name="sp-oquefaz-moro")
-				label.form-check-label(for="moro") Moro
-			.form-check.d-inline-block
-				input#trabalho.sp-oquefaz.form-check-input(type="checkbox", value="true", name="sp-oquefaz-trabalho")
-				label.form-check-label(for="trabalho") Trabalho
-			.form-check.d-inline-block
-				input#estudo.sp-oquefaz.form-check-input(type="checkbox", value="true", name="sp-oquefaz-estudo")
-				label.form-check-label(for="estudo") Estudo
-			.form-check.d-inline-block
-				input#sp-visito.sp-oquefaz.form-check-input(type="checkbox", value="true", name="sp-oquefaz-visito")
-				label.form-check-label(for="sp-visito") Visito
+		.row
+			.col-md-6
+				p.enunciado O que você faz na cidade de São Paulo?
+				.form-group.form-check-group
+					.form-check
+						input#moro.sp-oquefaz.form-check-input(type="checkbox", value="true", name="sp-oquefaz-moro")
+						label.form-check-label(for="moro") Moro
+					.form-check
+						input#trabalho.sp-oquefaz.form-check-input(type="checkbox", value="true", name="sp-oquefaz-trabalho")
+						label.form-check-label(for="trabalho") Trabalho
+					.form-check
+						input#estudo.sp-oquefaz.form-check-input(type="checkbox", value="true", name="sp-oquefaz-estudo")
+						label.form-check-label(for="estudo") Estudo
+					.form-check
+						input#sp-nenhum.sp-oquefaz-nenhum.form-check-input(type="checkbox", name="sp-oquefaz-nenhum")
+						label.form-check-label(for="sp-nenhum") Nenhum dos acima
 		include ../slider-controls

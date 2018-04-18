@@ -1,9 +1,9 @@
-.question-wrapper.carousel-item
+.question-wrapper.carousel-item.secao-3
 	.question
 		p.enunciado Quais meios de transporte você usa para circular pela cidade?   
 		p.explain Pode marcar vários.
-		.row
-			.col-12.col-lg-4
+		.row.form-check-group
+			.col-12.col-md-6
 				.form-check
 					input#ando-a-pe.meio-de-transporte.form-check-input(type="checkbox", value="ando-a-pe", name="meio-de-transporte")
 					label.form-check-label(for="ando-a-pe") Ando a pé
@@ -19,7 +19,7 @@
 				.form-check
 					input#carro.meio-de-transporte.form-check-input(type="checkbox", value="carro", name="meio-de-transporte")
 					label.form-check-label(for="carro") Carro
-			.col-12.col-lg-8
+			.col-12.col-md-6
 				.form-check
 					input#caronas.meio-de-transporte.form-check-input(type="checkbox", value="caronas", name="meio-de-transporte")
 					label.form-check-label(for="caronas") Caronas em veículos diversos
@@ -35,7 +35,8 @@
 				.form-check
 					input#trem.meio-de-transporte.form-check-input(type="checkbox", value="trem", name="meio-de-transporte")
 					label.form-check-label(for="trem") Trem
-		.form-group
-			label.form-control-label.text-primary Outros? Quais?
-			input.form-control(name="meio-de-transporte")
+				.form-check
+					input#meio-outro.meio-de-transporte.form-check-input(type="checkbox", value="outro", name="meio-de-transporte")
+					label.form-check-label(for="meio-outro") Outro
+						input#meio-outro-input.form-control(name="meio-de-transporte", placeholder="Qual?")
 		include ../slider-controls

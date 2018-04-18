@@ -1,71 +1,102 @@
-.question-wrapper.carousel-item
+.question-wrapper.carousel-item.secao-3
 	.question.frequencia
-		p.enunciado Com qual frequência você vive as situações abaixo quando sai para curtir a cidade?
 		.row
-			.col-12.col-md-6
-				p.sub-enunciado Fico com receio de novos programas, prefiro não me arriscar
-				.form-check.d-inline
-					input#sempre1.form-check-input(type="radio", value="sempre", name="prefiro-nao-arriscar")
-					label.form-check-label(for="sempre1") Sempre
-				.form-check.d-inline
-					input#as-vezes1.form-check-input(type="radio", value="as-vezes", name="prefiro-nao-arriscar")
-					label.form-check-label(for="as-vezes1") Às vezes
-				.form-check.d-inline
-					input#nunca1.form-check-input(type="radio", value="nunca", name="prefiro-nao-arriscar")
-					label.form-check-label(for="nunca1") Nunca
-			.col-12.col-md-6
-				p.sub-enunciado Sofro com racismo, machismo, homofobia e outras discriminações
-				.form-check.d-inline
-					input#sempre2.form-check-input(type="radio", value="sempre", name="sofro-discriminacao")
-					label.form-check-label(for="sempre2") Sempre
-				.form-check.d-inline
-					input#as-vezes2.form-check-input(type="radio", value="as-vezes", name="sofro-discriminacao")
-					label.form-check-label(for="as-vezes2") Às vezes
-				.form-check.d-inline
-					input#nunca2.form-check-input(type="radio", value="nunca", name="sofro-discriminacao")
-					label.form-check-label(for="nunca2") Nunca
-			.col-12.col-md-6
-				p.sub-enunciado Tenho acessibilidade física para aproveitar espaços e programações
-				.form-check.d-inline
-					input#sempre3.form-check-input(type="radio", value="sempre", name="tenho-acessibilidade")
-					label.form-check-label(for="sempre3") Sempre
-				.form-check.d-inline
-					input#as-vezes3.form-check-input(type="radio", value="as-vezes", name="tenho-acessibilidade")
-					label.form-check-label(for="as-vezes3") Às vezes
-				.form-check.d-inline
-					input#nunca3.form-check-input(type="radio", value="nunca", name="tenho-acessibilidade")
-					label.form-check-label(for="nunca3") Nunca
-			.col-12.col-md-6
-				p.sub-enunciado Tenho grana para fazer os programas que eu gostaria
-				.form-check.d-inline
-					input#sempre4.form-check-input(type="radio", value="sempre", name="tenho-grana")
-					label.form-check-label(for="sempre4") Sempre
-				.form-check.d-inline
-					input#as-vezes4.form-check-input(type="radio", value="as-vezes", name="tenho-grana")
-					label.form-check-label(for="as-vezes4") Às vezes
-				.form-check.d-inline
-					input#nunca4.form-check-input(type="radio", value="nunca", name="tenho-grana")
-					label.form-check-label(for="nunca4") Nunca
-			.col-12.col-md-6
-				p.sub-enunciado Passo por tensões e repressões de autoridades ou outros atores locais
-				.form-check.d-inline
-					input#sempre6.form-check-input(type="radio", value="sempre", name="sofro-tensoes-e-repressoes")
-					label.form-check-label(for="sempre6") Sempre
-				.form-check.d-inline
-					input#as-vezes6.form-check-input(type="radio", value="as-vezes", name="sofro-tensoes-e-repressoes")
-					label.form-check-label(for="as-vezes6") Às vezes
-				.form-check.d-inline
-					input#nunca6.form-check-input(type="radio", value="nunca", name="sofro-tensoes-e-repressoes")
-					label.form-check-label(for="nunca6") Nunca
-			.col-12.col-md-6
-				p.sub-enunciado Vivo encontros, surpresas e novidades agradáveis 
-				.form-check.d-inline
-					input#sempre7.form-check-input(type="radio", value="sempre", name="vivo-encontros")
-					label.form-check-label(for="sempre7") Sempre
-				.form-check.d-inline
-					input#as-vezes7.form-check-input(type="radio", value="as-vezes", name="vivo-encontros")
-					label.form-check-label(for="as-vezes7") Às vezes
-				.form-check.d-inline
-					input#nunca7.form-check-input(type="radio", value="nunca", name="vivo-encontros")
-					label.form-check-label(for="nunca7") Nunca
-		include ../slider-controls
+			.col-12.col-sm-auto
+				p.enunciado 
+					small Na sua vivência em São Paulo, com que frequência você:<br>
+					| Sofre com racismo, machismo, homofobia e/ou outras discriminações
+				.form-check-group
+					.form-check.d-inline-block
+						input#sempre2.form-check-input(type="radio", value="sempre", name="sofre-discriminacao")
+						label.form-check-label(for="sempre2") Sempre
+					.form-check.d-inline-block
+						input#as-vezes2.form-check-input(type="radio", value="as-vezes", name="sofre-discriminacao")
+						label.form-check-label(for="as-vezes2") Às vezes
+					.form-check.d-inline-block
+						input#nunca2.form-check-input(type="radio", value="nunca", name="sofre-discriminacao")
+						label.form-check-label(for="nunca2") Nunca
+.question-wrapper.carousel-item.secao-3
+	.question.frequencia
+		.row
+			.col-12.col-sm-auto
+				p.enunciado 
+					small Na sua vivência em São Paulo, com que frequência você:<br>
+					| Se sente inseguro ou em perigo na rua
+				.form-check-group
+					.form-check.d-inline-block
+						input#sempre3.form-check-input(type="radio", value="sempre", name="sente-se-seguro")
+						label.form-check-label(for="sempre3") Sempre
+					.form-check.d-inline-block
+						input#as-vezes3.form-check-input(type="radio", value="as-vezes", name="sente-se-seguro")
+						label.form-check-label(for="as-vezes3") Às vezes
+					.form-check.d-inline-block
+						input#nunca3.form-check-input(type="radio", value="nunca", name="sente-se-seguro")
+						label.form-check-label(for="nunca3") Nunca
+.question-wrapper.carousel-item.secao-3
+	.question.frequencia
+		.row
+			.col-12.col-sm-auto
+				p.enunciado 
+					small Na sua vivência em São Paulo, com que frequência você:<br>
+					| Enfrenta dificuldades para circular na rua por falta de acessibilidade para deficiências e/ou reduções motoras
+				.form-check-group
+					.form-check.d-inline-block
+						input#sempre1.form-check-input(type="radio", value="sempre", name="enfrenta-dificuldade-de-acessibilidade")
+						label.form-check-label(for="sempre1") Sempre
+					.form-check.d-inline-block
+						input#as-vezes1.form-check-input(type="radio", value="as-vezes", name="enfrenta-dificuldade-de-acessibilidade")
+						label.form-check-label(for="as-vezes1") Às vezes
+					.form-check.d-inline-block
+						input#nunca1.form-check-input(type="radio", value="nunca", name="enfrenta-dificuldade-de-acessibilidade")
+						label.form-check-label(for="nunca1") Nunca
+.question-wrapper.carousel-item.secao-3
+	.question.frequencia
+		.row
+			.col-12.col-sm-auto
+				p.enunciado 
+					small Na sua vivência em São Paulo, com que frequência você:<br>
+					| Organiza ou tem vontade de organizar atividades culturais, sociais e/ou econômicas
+				.form-check-group
+					.form-check.d-inline-block
+						input#sempre4.form-check-input(type="radio", value="sempre", name="organiza-atividades")
+						label.form-check-label(for="sempre4") Sempre
+					.form-check.d-inline-block
+						input#as-vezes4.form-check-input(type="radio", value="as-vezes", name="organiza-atividades")
+						label.form-check-label(for="as-vezes4") Às vezes
+					.form-check.d-inline-block
+						input#nunca4.form-check-input(type="radio", value="nunca", name="organiza-atividades")
+						label.form-check-label(for="nunca4") Nunca
+.question-wrapper.carousel-item.secao-3
+	.question.frequencia
+		.row
+			.col-12.col-sm-auto
+				p.enunciado 
+					small Na sua vivência em São Paulo, com que frequência você:<br>
+					| Passa por repressões de autoridades policiais
+				.form-check-group
+					.form-check.d-inline-block
+						input#sempre6.form-check-input(type="radio", value="sempre", name="sofre-repressao-policial")
+						label.form-check-label(for="sempre6") Sempre
+					.form-check.d-inline-block
+						input#as-vezes6.form-check-input(type="radio", value="as-vezes", name="sofre-repressao-policial")
+						label.form-check-label(for="as-vezes6") Às vezes
+					.form-check.d-inline-block
+						input#nunca6.form-check-input(type="radio", value="nunca", name="sofre-repressao-policial")
+						label.form-check-label(for="nunca6") Nunca
+.question-wrapper.carousel-item.secao-3
+	.question.frequencia
+		.row
+			.col-12.col-sm-auto
+				p.enunciado 
+					small Na sua vivência em São Paulo, com que frequência você:<br>
+					| Deixa de sair devido às distâncias, tempo ou custo de transporte
+				.form-check-group
+					.form-check.d-inline-block
+						input#sempre7.form-check-input(type="radio", value="sempre", name="deixa-de-sair-transporte")
+						label.form-check-label(for="sempre7") Sempre
+					.form-check.d-inline-block
+						input#as-vezes7.form-check-input(type="radio", value="as-vezes", name="deixa-de-sair-transporte")
+						label.form-check-label(for="as-vezes7") Às vezes
+					.form-check.d-inline-block
+						input#nunca7.form-check-input(type="radio", value="nunca", name="deixa-de-sair-transporte")
+						label.form-check-label(for="nunca7") Nunca

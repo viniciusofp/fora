@@ -1,9 +1,8 @@
-.question-wrapper.carousel-item
+.question-wrapper.carousel-item.secao-2
 	.question
 		p.enunciado Como você acessa informações sobre o que está acontecendo na cidade?  
-		p.explain Pode marcar todas as opções que você usa!
-		.row
-			.col-6
+		.row.form-check-group
+			.col-12.col-sm-6
 				.form-check
 					input#whatsapp.acesso-informacao.form-check-input(type="checkbox", value="whatsapp", name="acesso-informacao")
 					label.form-check-label(for="whatsapp") WhatsApp
@@ -25,10 +24,10 @@
 				.form-check
 					input#tv-paga.acesso-informacao.form-check-input(type="checkbox", value="tv-paga", name="acesso-informacao")
 					label.form-check-label(for="tv-paga") TV paga
-			.col-6
 				.form-check
 					input#facebook.acesso-informacao.form-check-input(type="checkbox", value="facebook", name="acesso-informacao")
 					label.form-check-label(for="facebook") Facebook
+			.col-12.col-sm-6
 				.form-check
 					input#twitter.acesso-informacao.form-check-input(type="checkbox", value="twitter", name="acesso-informacao")
 					label.form-check-label(for="twitter") Twitter
@@ -47,8 +46,8 @@
 				.form-check
 					input#familiares-amigos.acesso-informacao.form-check-input(type="checkbox", value="familiares-amigos", name="acesso-informacao")
 					label.form-check-label(for="familiares-amigos") Com familiares, amigos, colegas de trabalho, etc.
-			.col-12
-				.form-group
-					label.form-control-label.text-primary Outros? Quais?
-					input.form-control(name="acesso-informacao")
+				.form-check
+					input#acesso-outro.acesso-informacao.form-check-input(type="checkbox", value="acesso-outro", name="acesso-informacao")
+					label.form-check-label(for="acesso-outro") Outros
+						input#acesso-outro-input.form-control(name="acesso-informacao-outro", placeholder="Quais?")
 		include ../slider-controls

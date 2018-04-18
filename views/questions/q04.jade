@@ -1,9 +1,9 @@
-.question-wrapper.carousel-item
-	.question
-		p.enunciado Em que local você nasceu
+.question-wrapper.carousel-item.secao-2
+	.question.center
+		p.enunciado Em que local você nasceu?
 		.form-group
 			select#pais.form-control(name='pais', onchange="nasceuBrasil(this);")
-				option(selected, disabled)
+				option(selected, disabled) País
 				option(value='Brasil') Brasil
 				option(value='África do Sul') África do Sul
 				option(value='Albânia') Albânia
@@ -180,6 +180,7 @@
 				option(value='Zimbábue') Zimbábue
 		.form-group
 			select#estado.form-control(name="estado", style="display: none")
+				option(selected, disabled) Estado
 				option(value='AC') Acre
 				option(value='AL') Alagoas
 				option(value='AP') Amapá

@@ -1,0 +1,31 @@
+.question-wrapper.carousel-item.active
+	.question
+		p.enunciado.red Qual a relevância dos espaços públicos* para sua vida?
+		.form-check-bar.row
+			.col
+				.form-check
+					input#nenhuma.form-check-input(type="radio",name="relevancia", value="nenhuma" required)
+					label.form-check-label(for="nenhuma") Nenhuma
+			.col
+				.form-check
+					input#pouca.form-check-input(type="radio",name="relevancia", value="pouca" required)
+					label.form-check-label(for="pouca") Pouca
+			.col
+				.form-check
+					input#media.form-check-input(type="radio",name="relevancia", value="media" required)
+					label.form-check-label(for="media") Média
+			.col
+				.form-check
+					input#muita.form-check-input(type="radio",name="relevancia", value="muita" required)
+					label.form-check-label(for="muita") Muita
+			.col
+				.form-check
+					input#toda.form-check-input(type="radio",name="relevancia", value="toda" required)
+					label.form-check-label(for="toda") Toda
+		.check-bar
+			#check-bar-progress
+		.obs
+			p * Espaços de acesso e uso público para encontros e convívio: ruas, praças, parques, calçadas, áreas verdes, passagens, etc.
+
+
+		include ../slider-controls

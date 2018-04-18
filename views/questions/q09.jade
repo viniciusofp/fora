@@ -1,9 +1,8 @@
-.question-wrapper.carousel-item
+.question-wrapper.carousel-item.secao-3
 	.question
-		p.enunciado Na sua experiência, você relaciona a cidade de São Paulo com:  
-		p.explain Pode marcar várias!
-		.row
-			.col-12.col-sm-4
+		p.enunciado Com base na sua experiência, escolha três palavras abaixo que melhor ilustram São Paulo:
+		.row.form-check-group
+			.col-6.col-sm-4
 				.form-check
 					input#qualidade-de-vida.oqueviveemsp.form-check-input(type="checkbox", value="qualidade-de-vida", name="o-que-vive-em-sp")
 					label.form-check-label(for="qualidade-de-vida") Qualidade de Vida
@@ -19,7 +18,10 @@
 				.form-check
 					input#estranhamento.oqueviveemsp.form-check-input(type="checkbox", value="estranhamento", name="o-que-vive-em-sp")
 					label.form-check-label(for="estranhamento") Estranhamento
-			.col-12.col-sm-4
+				.form-check
+					input#rotina.oqueviveemsp.form-check-input(type="checkbox", value="rotina", name="o-que-vive-em-sp")
+					label.form-check-label(for="rotina") Rotina
+			.col-6.col-sm-4
 				.form-check
 					input#oportunidade.oqueviveemsp.form-check-input(type="checkbox", value="oportunidade", name="o-que-vive-em-sp")
 					label.form-check-label(for="oportunidade") Oportunidade
@@ -35,7 +37,10 @@
 				.form-check
 					input#resistencia.oqueviveemsp.form-check-input(type="checkbox", value="resistencia", name="o-que-vive-em-sp")
 					label.form-check-label(for="resistencia") Resistência
-			.col-12.col-sm-4
+				.form-check
+					input#novidade.oqueviveemsp.form-check-input(type="checkbox", value="novidade", name="o-que-vive-em-sp")
+					label.form-check-label(for="novidade") Novidade
+			.col-6.col-sm-4
 				.form-check
 					input#diversao.oqueviveemsp.form-check-input(type="checkbox", value="diversao", name="o-que-vive-em-sp")
 					label.form-check-label(for="diversao") Diversão
@@ -51,8 +56,8 @@
 				.form-check
 					input#dor.oqueviveemsp.form-check-input(type="checkbox", value="dor", name="o-que-vive-em-sp")
 					label.form-check-label(for="dor") Dor
-			.col-12
-				.form-group
-					label.form-control-label.text-primary Outras vivências em uma palavra? Quais?
-					input.form-control(name="o-que-vive-em-sp")
+				.form-check
+					input#oquevive-outro.oqueviveemsp.form-check-input(type="checkbox", value="outro", name="o-que-vive-em-sp")
+					label.form-control-label(for="oquevive-outro") Outras vivências em uma palavra?
+						input#oquevive-outro-input.form-control(name="o-que-vive-em-sp", placeholder="Quais?")
 		include ../slider-controls
