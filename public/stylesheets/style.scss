@@ -416,10 +416,6 @@ select.form-control:not([size]):not([multiple]) {
     .enunciado, .obs {
         color: red;
     }
-    input:checked + label {
-        background-color: red!important;
-    }
-
 }
 
 .secao-2 {
