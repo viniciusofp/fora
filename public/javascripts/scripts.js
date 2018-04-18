@@ -255,6 +255,8 @@ $('#carouselExampleControls').on('slide.bs.carousel', function (e) {
             }
             if ($('#moro')[0].checked == true || $('#trabalho')[0].checked == true || $('#estudo')[0].checked == true) {
                 quemmoratrabalhaestuda.insertAfter('#cep-modal');
+                $('#cidade-cep').val('São Paulo');
+                $('#estado-cep').val('SP');
             }
             if ($('#moro')[0].checked == true) {
                 quemmora.insertAfter('#cep-modal');
