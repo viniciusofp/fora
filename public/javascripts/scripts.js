@@ -331,3 +331,15 @@ $('#carouselExampleControls').on('slide.bs.carousel', function (e) {
     $('#circulacao-submit').click(function() {
         $('#circulacao').val(places)
     })
+
+$('#carouselExampleControls').on('slid.bs.carousel', function (e) {
+    if ($(e.relatedTarget).hasClass('secao-1')) {
+        $('.brand').css('fill', 'red')
+    }
+    if ($(e.relatedTarget).hasClass('secao-2')) {
+        $('.brand').css('fill', 'orange')
+    }
+    if ($(e.relatedTarget).hasClass('secao-3')) {
+        $('.brand').css('fill', 'blue')
+    }
+})
