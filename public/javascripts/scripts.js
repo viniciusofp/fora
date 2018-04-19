@@ -323,6 +323,7 @@ $('#carouselExampleControls').on('slid.bs.carousel', function (e) {
     console.log(questionsWidth)
     if (e.direction == 'left') {
         $('.progress-bar-q').append('<div class="question-bar"></div>')
+        $('.question-bar:last-child').css('width', questionsWidth)
     } else {
         $('.question-bar:last-child').remove();
     }
