@@ -1,9 +1,6 @@
 $(document).ready(function() {
-    setTimeout(function() {
-        window.scrollTo(0, 0);
-    },100)
 
-})
+
 
 // $.scrollify({
 //     section : ".question-wrapper",
@@ -329,3 +326,6 @@ $('#carouselExampleControls').on('slid.bs.carousel', function (e) {
     }
     $('.question-bar').css('width', questionsWidth)
 })
+
+
+}) // document ready
