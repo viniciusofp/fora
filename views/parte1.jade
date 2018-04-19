@@ -9,6 +9,8 @@ block content
 				form(action="/submit", method="post", autocomplete="on")
 					#carouselExampleControls.carousel.slide
 						.carousel-inner
+							include questions/intro1
+							include questions/intro2
 							// Qual a relevância dos espaços públicos* para sua vida?
 							include questions/q17
 							// Na sua opinião, quem deve participar das decisões sobre os espaços públicos*? 
@@ -17,7 +19,7 @@ block content
 							//- include questions/q01
 							//- // Em que local você nasceu?
 							//- include questions/q04
-							// Qual seu Nome? Em que ano você nasceu?
+							// Em que ano você nasceu? Onde você nasceu?
 							include questions/q05
 							// Com qual gênero você se identifica?
 							include questions/q03

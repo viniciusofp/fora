@@ -148,6 +148,16 @@ $('#carouselExampleControls').on('slide.bs.carousel', function (e) {
     } else {
         $('.img-right-oqvcfaz').fadeOut();
     }
+    if (activeQ.hasClass('intro1')) {
+        $('.img-right-intro1').fadeIn();
+    } else {
+        $('.img-right-intro1').fadeOut();
+    }
+    if (activeQ.hasClass('freq')) {
+        $('.img-right-freq').fadeIn();
+    } else {
+        $('.img-right-freq').fadeOut();
+    }
 })
 
 $('.carousel').each(function () {

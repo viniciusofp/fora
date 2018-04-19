@@ -41,12 +41,12 @@ span.bar {
     }
 }
 
-@for $i from 1 through 2 {
+@for $i from 1 through 4 {
     .question-bar:nth-child(#{$i}) {
         background: red;
     }
 }
-@for $i from 3 through 7 {
+@for $i from 5 through 9 {
     .question-bar:nth-child(#{$i}) {
         background: orange;
     }
@@ -214,6 +214,14 @@ html {
     opacity: 0;
 }
 
+.big {
+    font-size: 5rem!important;
+}
+
+.vamos-comecar {
+    float: right;
+}
+
 .enunciado {
     font-family: 'Source Sans Pro', sans-serif;
     font-size: 2.5rem;
@@ -273,29 +281,28 @@ input[type=text],
 input[type=number],
 select {
     border: none;
-    border-bottom: 5px solid white;
+    border-bottom: 2px solid white;
     background-color: transparent;
-    font-size: 1.6rem;
+    // font-size: 1.6rem;
     &.short {
         max-width: 300px;
     }
     &:focus {
         box-shadow: none;
         outline: none;
-        border-color: $white;
-        background: #fff;
+        border-width: 5px;
     }
 }
 
 textarea.form-control {
-    border: 5px solid white;
+    border: 2px solid white;
     font-size: 1.6rem;
     min-height: 250px;
     &:focus {
+        background-color: transparent;
         box-shadow: none;
         outline: none;
-        border-color: $white;
-        background: #fff;
+        border-width: 5px;
     }
 }
 
@@ -387,15 +394,13 @@ select.form-control:not([size]):not([multiple]) {
             font-size: 1.2rem;
         }
         input {
-            padding: 15px;
+            padding: 5px;
             display: block;
             position: absolute;
             left: 0;
             top: 65px;
             min-width: 300px;
             background-color: transparent;
-            border: none;
-            border-bottom: 5px solid white;
             opacity: 0;
             transition: .2s;
             &:focus {
@@ -429,10 +434,22 @@ select.form-control:not([size]):not([multiple]) {
 .img-right-oqvcfaz {
     background-image: url('/images/oqvcfaz.jpg');
 }
+.img-right-intro1 {
+    background-image: url('/images/intro1.jpg');
+}
+.img-right-freq {
+    background-image: url('/images/freq.jpg');
+}
 
 .secao-1 {
     .enunciado, .obs {
         color: red;
+    }
+    .form-control,
+    input[type=text],
+    input[type=number],
+    select {
+        border-color: red;
     }
 }
 
@@ -443,6 +460,12 @@ select.form-control:not([size]):not([multiple]) {
     input:checked + label {
         background-color: $orange!important;
     }
+    .form-control,
+    input[type=text],
+    input[type=number],
+    select {
+        border-color: $orange;
+    }
 }
 .secao-3 {
     .enunciado, .obs {
@@ -450,6 +473,12 @@ select.form-control:not([size]):not([multiple]) {
     }
     input:checked + label {
         background-color: $primary!important;
+    }
+    .form-control,
+    input[type=text],
+    input[type=number],
+    select {
+        border-color: $primary;
     }
 }
 
