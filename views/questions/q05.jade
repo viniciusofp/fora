@@ -1,14 +1,16 @@
 .question-wrapper.carousel-item.secao-2
 	.question.center
 		p.enunciado Em que ano você nasceu?
+		p.explain Digite abaixo!
 		.form-group
-			input.form-control.short(type="number",name="ano_nascimento", autocomplete="byear", placeholder="YYYY", pattern="[0-9]{4}", max="2010", min="1910", required)
+			input.form-control.short(type="number",name="ano_nascimento", autocomplete="byear", placeholder="XXXX", pattern="[0-9]{4}", max="2010", min="1910", required)
 
 		p.enunciado Onde você nasceu?
+		p.explain Selecione uma opção da lista!
 		.row
 			.col-auto
 				.form-group
-					select#pais.form-control.short(name='pais', onchange="nasceuBrasil(this);")
+					select#pais.form-control.short(name='pais')
 						option(selected, disabled) País
 						option(value='Brasil') Brasil
 						option(value='África do Sul') África do Sul

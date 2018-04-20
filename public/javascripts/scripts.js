@@ -1,13 +1,5 @@
 $(document).ready(function() {
 
-
-
-// $.scrollify({
-//     section : ".question-wrapper",
-//     scrollSpeed: 800,
-// });
-
-
 $('#outro_genero_input').click(function() {
     $('.genero').prop('checked', false);
     $('#outro_genero').prop('checked', true);
@@ -55,81 +47,24 @@ $('#melhoraespacotrabalho-outro').click(function() {
 $('#meio-outro').click(function() {
     $('#meio-outro-input').addClass('animated bounceIn').focus();
 });
-$('input[type=radio].goToNext').click(function() {
-    var nextObj = $(this).parent().parent().parent().parent().next();
-    setTimeout(function() {
-       nextObj.scrollintoview({duration: 1000})
-   }, 200)
-
-})
 
 
-$('input.goToNext').blur(function() {
-    var nextObj = $(this).parent().parent().parent().next();
-    console.log('lalalala', nextObj)
-
-    nextObj.scrollintoview({duration: 1000})
-})
-
-function nasceuBrasil(that) {
-    if (that.value == "Brasil") {
+$('select#pais').change(function() {
+    if ( $(this).val() == "Brasil") {
         document.getElementById("estado").style.display = "block";
     } else {
         document.getElementById("estado").style.display = "none";
     }
-}
+});
 
 $('#carouselExampleControls.carousel.slide').carousel({
   wrap: false,
   ride: false,
   interval: false,
   keyboard: true
-})
-
-// $('.question').waypoint(function(direction) {
-//     if (direction == "down") {
-//         $(this.element).parent().siblings().children().removeClass("focus");
-//         $(this.element).addClass("focus");
-//     }
-// }, {
-//   offset: '50%'
-// })
-// $('.question').waypoint(function(direction) {
-//     if (direction == "up") {
-//         $(this.element).parent().siblings().children().removeClass("focus");
-//         $(this.element).addClass("focus");
-//     }
-// }, {
-//   offset: function() {
-//     return window.innerHeight / 2 - this.element.clientHeight
-//   }
-// })
-
-var app = angular.module('app', ['ngResource']);
-app.controller('CEP', ['$scope', '$resource', '$q', function($scope, $resource, $q) {
-    $scope.buscaCep = function() {
-        var rua = $('#rua-cep').val();
-        var cidade = $('#cidade-cep').val();
-        var estado = $('#estado-cep').val();
-        var urlString = "http://viacep.com.br/ws/" + estado + '/' + cidade + '/' + rua + '/json/'
-        var Cep = $resource(urlString).query();
-            $q.all([
-            Cep.$promise,
-        ]).then( function (data) {
-            if (data[0][0] != undefined) {
-                $('#cep').val(data[0][0].cep)
-                $('#cep-modal').modal('hide')
-            } else {
-                alert('Não foi possível identificar o CEP, verifique se os campos foram digitados corretamente.')
-            }
+});
 
 
-        }, function(reason) {
-            alert('Não foi possível identificar o CEP, verifique se os campos foram digitados corretamente.' + reason)
-        });
-        // console.log(urlString)
-    }
-}]);
 
 
 
@@ -137,7 +72,6 @@ var questions = $('.question');
 
 $('#carouselExampleControls').on('slide.bs.carousel', function (e) {
     var activeQ = $(e.relatedTarget)
-    console.log($(window).innerWidth)
     if (activeQ.hasClass('gender')) {
         $('.img-right-gender').fadeIn();
     } else {
@@ -196,26 +130,7 @@ $('#toda').click(function() {
     $('#check-bar-progress').attr('class', "w100")
 })
 
-var cepQ = $('.question-wrapper.cep')
 
-
-
-
-
-
-// $('.next-icon').click(function() {
-//     if($('#sp-nenhum')[0].checked == true) {
-//         quemmora.remove();
-//         quemtrabalhaestuda.remove();
-//     } else {
-//         if ($('.quemmora')) {
-//             console.log('ok')
-//         }
-//         if ($('.quemtrabalhaestuda')) {
-//             console.log('ok')
-//         }
-//     }
-// })
 var quemmora = $('.quemmora');
 var quemtrabalhaestuda = $('.quemtrabalhaestuda');
 var quemmoratrabalhaestuda = $('.quemmoratrabalhaestuda');
@@ -256,7 +171,6 @@ $('#carouselExampleControls').on('slide.bs.carousel', function (e) {
             $('.quemtrabalhaestuda').remove();
             $('.quemmoratrabalhaestuda').remove();
             $('.quemnenhum').remove();
-            console.log('mudei do quem mora alo alo alo')
             if ($('#sp-nenhum')[0].checked == true) {
                 quemnenhum.insertAfter('#cep-modal');
             }
@@ -309,6 +223,9 @@ $('#carouselExampleControls').on('slide.bs.carousel', function (e) {
         $('#circulacao').val(places)
     })
 
+
+
+
 var questions = $('.question');
 var questionsLength = questions.length;
 var questionsWidth =window.innerWidth / questionsLength;
@@ -327,7 +244,6 @@ $('#carouselExampleControls').on('slid.bs.carousel', function (e) {
     var questions = $('.question');
     var questionsLength = questions.length;
     var questionsWidth =window.innerWidth / questionsLength;
-    console.log(questionsWidth)
     if (e.direction == 'left') {
         $('.progress-bar-q').append('<div class="question-bar"></div>')
         $('.question-bar:last-child').css('width', questionsWidth)
@@ -338,4 +254,71 @@ $('#carouselExampleControls').on('slid.bs.carousel', function (e) {
 })
 
 
+
+$('.next-icon').click(function() {
+    // $('.carousel').carousel('prev');
+
+    var thisQ = $('.active .question')
+    var qChildren = thisQ.find('input, textarea, select')
+    if ($('.active').hasClass('not-required')) {} else {
+        if (qChildren.length > 0) {
+            var hasAnswer = false ;
+            qChildren.each(function(i, el) {
+                if ($(el).attr('type') == 'text' || $(el).attr('type') == 'number') {
+                    if ($(el).val() != "") {
+                        hasAnswer = true;
+                    }
+                } else if ($(el).attr('type') == 'checkbox' || $(el).attr('type') == 'radio') {
+                    if (el.checked == true) {
+                        hasAnswer = true;
+                    }
+                } else if (el.tagName == 'SELECT') {
+                    if ($(el).val() != "") {
+                        hasAnswer = true;
+                    }
+                }
+            })
+            if (! hasAnswer) {
+                setTimeout(function() {
+                    $('.carousel').carousel('prev');
+                    $('#alert').modal('show')
+                }, 300)
+
+            }
+        } else {
+            console.log('não tem input')
+        }
+    }
+
+})
+
+
+
 }) // document ready
+
+// CEP Angular APP
+var app = angular.module('app', ['ngResource']);
+app.controller('CEP', ['$scope', '$resource', '$q', function($scope, $resource, $q) {
+    $scope.buscaCep = function() {
+        var rua = $('#rua-cep').val();
+        var cidade = $('#cidade-cep').val();
+        var estado = $('#estado-cep').val();
+        var urlString = "http://viacep.com.br/ws/" + estado + '/' + cidade + '/' + rua + '/json/'
+        var Cep = $resource(urlString).query();
+            $q.all([
+            Cep.$promise,
+        ]).then( function (data) {
+            if (data[0][0] != undefined) {
+                $('#cep').val(data[0][0].cep)
+                $('#cep-modal').modal('hide')
+            } else {
+                alert('Não foi possível identificar o CEP, verifique se os campos foram digitados corretamente.')
+            }
+
+
+        }, function(reason) {
+            alert('Não foi possível identificar o CEP, verifique se os campos foram digitados corretamente.' + reason)
+        });
+        // console.log(urlString)
+    }
+}]);
