@@ -1,6 +1,11 @@
-.question-wrapper.carousel-item.secao-3
+.img-right.img-right-reflexao
+.question-wrapper.carousel-item.secao-3.not-required.reflexao
 	.question
-		p.enunciado Se tiver algum comentário ou reflexão, escreva aqui:
-		.form-group
-			textarea.form-control(type="text",name="comentario-reflexao", placeholder="|")
+		.row
+			.col-md-6.col-lg-4
+				p.enunciado Se tiver algum comentário ou reflexão, escreva aqui:
+				.form-group
+					textarea.textinput.form-control(type="text",name="comentario-reflexao")
+
+				button.btn.btn-lg.btn-primary(type="submit") Enviar
 		include ../slider-controls

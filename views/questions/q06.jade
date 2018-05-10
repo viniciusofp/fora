@@ -1,27 +1,26 @@
 .question-wrapper.carousel-item.secao-2
 	.question
 		p.enunciado Em relação à cor/etnia, como você se identifica?
-		p.explain Selecione uma ou mais opções abaixo!
+		p.explain Selecione uma opção!
 		.form-group.form-check-group.row
-			.col-sm-6
+			.col-12
 				.form-check
-					input#asiatica.cor.form-check-input(type="checkbox", value="asiatica", name="cor", required)
-					label.form-check-label(for="asiatica") Asiática
+					input#asiatica.cor.form-check-input(type="radio", value="asiatica", name="cor")
+					label.form-check-label.goToNext(for="asiatica") Asiática
 				.form-check
-					input#branca.cor.form-check-input(type="checkbox", value="branca", name="cor", required)
-					label.form-check-label(for="branca") Branca
+					input#branca.cor.form-check-input(type="radio", value="branca", name="cor")
+					label.form-check-label.goToNext(for="branca") Branca
 				.form-check
-					input#preta.cor.form-check-input(type="checkbox", value="preta-negra", name="cor", required)
-					label.form-check-label(for="preta") Negra  / Preta
-			.col-sm-6
+					input#preta.cor.form-check-input(type="radio", value="preta-negra", name="cor")
+					label.form-check-label.goToNext(for="preta") Negra  / Preta
 				.form-check
-					input#indigena.cor.form-check-input(type="checkbox", value="indigena", name="cor", required)
-					label.form-check-label(for="indigena") Indígena / Povos Originários
+					input#indigena.cor.form-check-input(type="radio", value="indigena", name="cor")
+					label.form-check-label.goToNext(for="indigena") Indígena / Povos Originários
 				.form-check
-					input#oriente-medio.cor.form-check-input(type="checkbox", value="oriente-medio", name="cor", required)
-					label.form-check-label(for="oriente-medio") Oriente Médio e/ou Norte da África
+					input#oriente-medio.cor.form-check-input(type="radio", value="oriente-medio", name="cor")
+					label.form-check-label.goToNext(for="oriente-medio") Oriente Médio e/ou Norte da África
 				.form-check
-					input#outra-cor.cor.form-check-input(type="checkbox", value="outro", name="cor", required)
+					input#outra-cor.cor.form-check-input(type="radio", value="outro", name="cor")
 					label.form-check-label(for="outra-cor") Nenhum desses, me identifico como:
 						input#outra-cor-input.form-control(type="text", name="cor_outra", placeholder="Outra")
 		include ../slider-controls

@@ -5,8 +5,14 @@
 		.form-check-group.decisoes.row
 			.col-sm-6
 				.form-check
-					input#governo(type="checkbox", name="decisoes" value="Prefeitura e outros órgãos governamentais")
-					label(for="governo") Prefeitura e outros órgãos governamentais
+					input#prefeitura(type="checkbox", name="decisoes" value="Prefeitura")
+					label(for="prefeitura") Prefeitura
+				.form-check
+					input#vereadores(type="checkbox", name="decisoes" value="Vereadores")
+					label(for="vereadores") Vereadores
+				.form-check
+					input#especialistas(type="checkbox", name="decisoes" value="Especialistas técnicos")
+					label(for="especialistas") Especialistas técnicos
 				.form-check
 					input#empresas(type="checkbox", name="decisoes" value="Empresas")
 					label(for="empresas") Empresas
@@ -15,15 +21,21 @@
 					label(for="ongs") ONGs
 			.col-sm-6
 				.form-check
+					input#movimentos-sociais(type="checkbox", name="decisoes" value="Movimentos Sociais")
+					label(for="movimentos-sociais") Movimentos sociais
+				.form-check
 					input#associacoes-moradores(type="checkbox", name="decisoes" value="Associações de moradores")
 					label(for="associacoes-moradores") Associações de moradores
 				.form-check
-					input#todo-morador(type="checkbox", name="decisoes" value="Todo/qualquer morador do local")
-					label(for="todo-morador") Todo/qualquer morador do local
+					input#cidadaos-afetados(type="checkbox", name="decisoes" value="Cidadãos afetados pela decisão")
+					label(for="cidadaos-afetados") Cidadãos afetados pela decisão
+				.form-check
+					input#todo-cidadao(type="checkbox", name="decisoes" value="Todo/qualquer cidadão")
+					label(for="todo-cidadao") Todo/qualquer cidadão
 				.form-check
 					input#decisoes-outro(type="checkbox", name="decisoes" value="Outros")
-					label(for="decisoes-outro") Outros
-						input#decisoes-outro-input(type="text", name="decisoes-outro" value="" placeholder="Quem?")
+					label(for="decisoes-outro") Outros, quem?
+						input#decisoes-outro-input(type="text", name="decisoes-outro" value="")
 		.obs
 			p * Espaços de acesso e uso público para encontros e convívio: ruas, praças, parques, calçadas, áreas verdes, passagens, etc.
 

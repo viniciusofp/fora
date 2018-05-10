@@ -1,8 +1,24 @@
 extends layout
 
 block content
-	.container
+	.container-fluid.contracapa
 		.row.justify-content-center
-			.col-md-8
-				h1(style="margin-top: 200px;") Parabéns
+			.col-md-7
+				p.enunciado.big Acabou, valeu, obrigado!
+				p.lead Pra não ficar de Fora, receber os resultados da pesquisa, convites e notícias sobre todas as atividades do projeto, deixe seu e-mail:
+				form#mail-form(action="/emailform", method="post")
+					.form-group
+						input.form-control(type="email", name='email')
+				.obs
+					a.saibamais(href="#", onclick="postEmail()") Enviar e seguir para o site
 
+			.col-md-5.col-bg
+
+	script.
+
+		setTimeout(function() {
+			$('.brand').css('fill', '#ff00ff')
+		},500)
+		var postEmail = function() {
+			$('#mail-form').submit();
+		}

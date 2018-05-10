@@ -1,36 +1,36 @@
-.question-wrapper.carousel-item.secao-1
+.question-wrapper.carousel-item.secao-1.abre
 	.question
-		p.enunciado.red Qual a relevância dos espaços públicos* para sua vida?
+		p.enunciado.red Qual a relevância dos espaços públicos* para sua vida na cidade?
 		.form-check-bar.row
 			.col
 				.form-check
-					input#nenhuma.form-check-input(type="radio",name="relevancia", value="nenhuma" required)
-					label.form-check-label(for="nenhuma") Nenhuma
+					input#nenhuma.form-check-input(type="radio",name="relevancia", value="nenhuma")
+					label.form-check-label.goToNext(for="nenhuma") Nenhuma
 			.col
 				.form-check
-					input#pouca.form-check-input(type="radio",name="relevancia", value="pouca" required)
-					label.form-check-label(for="pouca") Pouca
+					input#pouca.form-check-input(type="radio",name="relevancia", value="pouca")
+					label.form-check-label.goToNext(for="pouca") Pouca
 			.col
 				.form-check
-					input#media.form-check-input(type="radio",name="relevancia", value="media" required)
-					label.form-check-label(for="media") Média
+					input#media.form-check-input(type="radio",name="relevancia", value="media")
+					label.form-check-label.goToNext(for="media") Média
 			.col
 				.form-check
-					input#muita.form-check-input(type="radio",name="relevancia", value="muita" required)
-					label.form-check-label(for="muita") Muita
+					input#muita.form-check-input(type="radio",name="relevancia", value="muita")
+					label.form-check-label.goToNext(for="muita") Muita
 			.col
 				.form-check
-					input#toda.form-check-input(type="radio",name="relevancia", value="toda" required)
-					label.form-check-label(for="toda") Toda
+					input#toda.form-check-input(type="radio",name="relevancia", value="toda")
+					label.form-check-label.goToNext(for="toda") Toda
 		.check-bar
-			label.progress-label(for="nenhuma")
-			label.progress-label(for="pouca")
-			label.progress-label(for="media")
-			label.progress-label(for="muita")
-			label.progress-label(for="toda")
+			label.progress-label.goToNext(for="nenhuma")
+			label.progress-label.goToNext(for="pouca")
+			label.progress-label.goToNext(for="media")
+			label.progress-label.goToNext(for="muita")
+			label.progress-label.goToNext(for="toda")
 			#check-bar-progress
 		.obs
-			p * Espaços de acesso e uso público para encontros e convívio: ruas, praças, parques, calçadas, áreas verdes, passagens, etc.
+			p * Espaços de acesso e uso público para encontros e convívio: ruas, praças, parques, calçadas, áreas verdes, etc.
 
 
 		include ../slider-controls

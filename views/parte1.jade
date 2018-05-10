@@ -1,6 +1,8 @@
 extends layout
 
 block content
+	.alert
+		p Por favor responda para prosseguir!
 	.progress-bar-q
 		.question-bar
 	.container-fluid
@@ -25,8 +27,8 @@ block content
 							include questions/q03
 							// Em relação à cor/etnia, como você se identifica?
 							include questions/q06
-							// Qual é sua fé?
-							include questions/q07
+							//- Qual é sua fé?
+							//- include questions/q07
 							// Como você acessa informações sobre o que está acontecendo na cidade? 
 							include questions/q12
 							// Na sua experiência, você relaciona a cidade de São Paulo com:
@@ -35,16 +37,19 @@ block content
 							include questions/q02
 							// Onde você mora? Você sabe seu CEP?
 							include questions/q08
+
 							//- Quem Mora!
 							// Qual é o espaço público* que você frequenta mais perto da sua casa? 
 							include questions/q19
 							// Na sua opinião, o que você faria para melhorar esse espaço público* perto da sua casa?
 							include questions/q20
+
 							//- Quem Trabalha/Estuda!
 							// Qual é o espaço público* que você frequenta mais perto do seu local de trabalho ou estudo?
 							include questions/q21
 							// Na sua opinião, o que você faria para melhorar esse espaço público* perto do seu local de trabalho ou estudo?
 							include questions/q22
+
 							//- Quem Mora/Trabalha/Estuda!
 							// Nos últimos três meses, com que frequência você saiu para curtir* a cidade de São Paulo? 
 							include questions/q16
@@ -75,25 +80,22 @@ block content
 							include questions/q14
 							// Se tiver algum comentário ou reflexão, escreva aqui:
 							include questions/q28
-							.question-wrapper.carousel-item
-								.question.absolutecenter
-										button.btn.btn-lg.btn-primary(type="submit") Enviar
+							
 	.slider-nav
 		a(href='#carouselExampleControls', role='button', data-slide='prev')
 			span.prev-icon(aria-hidden='true')
-				img(src="/images/arrow-left.png")
-			span.sr-only Anterior
-		a(href='#carouselExampleControls', role='button', data-slide='next')
-			span.next-icon(aria-hidden='true')
-				img(src="/images/arrow-right.png")
-			span.sr-only Próxima
+				svg(version='1.1', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', xmlns:a='http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/', x='0px', y='0px', width='67.3px', height='25.6px', viewbox='0 0 67.3 25.6', style='enable-background:new 0 0 67.3 25.6;', xml:space='preserve')
+					defs
+					path(style='&st0;', d='M14.7,0h2.7c-1.9,4-4.2,7.7-7,11h56.9v3.6H10.5c2.4,2.4,4.8,6.1,7.1,11h-2.8C9.5,19.6,4.5,15.6,0,13.5v-1.6\
+				  C4.2,10.2,9.1,6.2,14.7,0')
 
-	#alert.modal(tabindex='-1', role='dialog')
-		.modal-dialog(role='document')
-			.modal-content
-				.modal-header
-					h5.modal-title Responde alguma coisa!
-					button.close(type='button', data-dismiss='modal', aria-label='Close')
-						span(aria-hidden='true') ×
+			span.sr-only Anterior
+		a.nextA(href='#carouselExampleControls', role='button', data-slide='next')
+			span.next-icon(aria-hidden='true')
+				svg(version='1.1', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', xmlns:a='http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/', x='0px', y='0px', width='67.3px', height='25.6px', viewbox='0 0 67.3 25.6', style='enable-background:new 0 0 67.3 25.6;', xml:space='preserve')
+					defs
+					path(d='M52.6,0c5.6,6.2,10.5,10.2,14.7,11.9v1.6c-4.5,2.1-9.5,6.1-14.8,12.2h-2.7c2.3-4.9,4.6-8.6,7-11H0V11h56.9\
+					c-2.7-3.3-5-7-6.9-11H52.6z')
+			span.sr-only Próxima
 
 
